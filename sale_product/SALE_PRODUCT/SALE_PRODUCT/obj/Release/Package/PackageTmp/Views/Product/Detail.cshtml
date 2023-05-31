@@ -1,0 +1,64 @@
+﻿@model SALE_PRODUCT.Models.Product
+@{
+    ViewBag.Title = "Sản phẩm";
+}
+<h2 class="text-center">Sản phẩm</h2>
+<hr />
+<div class="prod-detail">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="clearfix">
+                <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
+                    @foreach (var item in ViewBag.ListImage)
+                    {
+                        <li data-thumb="@item.Image" class="text-center">
+                            <img src="@item.Image" style="max-height:338px;" />
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="prod-name">
+                <h2>@Model.Title</h2>
+                <h3>Model: @Model.Model @Model.Size</h3>
+                <p>Giá gốc: <span class="gach">@string.Format("{0:#,##0}", Model.Price) đ </span></p>
+                <p class="sale">SALE: @Model.Sale%</p>
+                <p>Giá khuyến mãi: <span class="chot">@string.Format("{0:#,##0}", Model.Discount) đ</span></p>
+                <div class="store">
+                    @if (!string.IsNullOrEmpty(Model.Shopee))
+                    {
+                        <a href="@Model.Shopee" title="shopee">
+                            <img src="~/Image/shopee.jpg" alt="shopee" />
+                        </a>
+                    }
+                    @if (!string.IsNullOrEmpty(Model.Lazada))
+                    {
+                        <a href="@Model.Lazada" title="lazada">
+                            <img src="~/Image/lazada.jpg" alt="lazada" />
+                        </a>
+                    }
+                    @if (!string.IsNullOrEmpty(Model.DMX))
+                    {
+                        <a href="@Model.DMX" title="dmx">
+                            <img src="~/Image/dmx.jpg" alt="dmx" />
+                        </a>
+                    }
+                    @if (!string.IsNullOrEmpty(Model.DMCL))
+                    {
+                        <a href="@Model.DMCL" title="dmcl">
+                            <img src="~/Image/dmcl.jpg" alt="dmcl" />
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="prod-des">
+                <h3 class="text-center">MÔ TẢ CHI TIẾT</h3>
+                <hr />
+                @Html.Raw(Model.Detail)
+            </div>
+        </div>
+    </div>
+</div>

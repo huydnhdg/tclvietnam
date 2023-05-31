@@ -1,0 +1,82 @@
+﻿@model PagedList.IPagedList<TCL_Voucher.Models.VongQuay>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+    var index = 0;
+}
+<style>
+    input[type=date] {
+        max-width: 160px;
+    }
+</style>
+<div class="row">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <form>
+                <div class="form-group row">
+                    <div class="col-md-2">
+                        <input class="form-control col-md-3" name="textSearch" value="@ViewBag.textSearch" placeholder="Tìm kiếm" />
+                    </div>
+                    <div class="col-md-4">
+                        @Html.TextBox("start_date", ViewBag.start_date as string, new { @class = "form-control col-md-6", @type = "date" })
+                        @Html.TextBox("end_date", ViewBag.end_date as string, new { @class = "form-control col-md-6", @type = "date" })
+                    </div>
+
+                </div>
+                <button class="btn btn-primary" type="submit"><i class="ti ti-filter"></i> Tìm kiếm</button>
+                <a class="btn btn-success" href="/Admin/VongQuay/export_vongquay"><i class="ti ti-export"></i> Export excel</a>
+            </form>
+        </div>
+        <div class="panel-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Ngày tạo</th>
+                        <th>Số điện thoại</th>
+                        <th>Họ tên</th>
+                        <th>Địa chỉ</th>
+                        <th>Nơi mua</th>
+                        <th>Sản phẩm</th>
+                        <th>Model</th>
+                        <th>Size</th>
+                        <th>Hóa đơn</th>
+                        <th>Giải thưởng</th>
+                        @*<th>#</th>*@
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        index++;
+                        <tr>
+                            <td>@index</td>
+                            <td>@item.Createdate.ToString("dd/MM/yyyy")</td>
+                            <td>@item.Phone</td>
+                            <td>@item.Name</td>
+                            <td>@item.Province</td>
+                            <td>@item.BuyAdr</td>
+                            <td>@item.PRODUCT</td>
+                            <td>@item.MODEL</td>
+                            <td>@item.SIZE</td>
+                            <td>
+                                <img src="@item.INVOICE" width="100" />
+                            </td>
+                            <td>@item.PAYMENT</td>
+                            @*<td>
+                                <a class="btn" href="/admin/vongquay/delete/@item.ID" onclick="return confirm('Bạn muốn xóa dòng này?')" title="xóa phiếu"><i class="fa fa-trash-o"></i></a>
+                            </td>*@
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+            <div>
+                <div class="showing">Showing @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount</div>
+                @Html.PagedListPager(Model, page => Url.Action("Index", new { page, textSearch = ViewBag.textSearch, status = ViewBag.status, start_date = ViewBag.start_date, end_date = ViewBag.end_date }))
+                
+            </div>
+        </div>
+    </div>
+</div>
+

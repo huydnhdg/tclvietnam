@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,300italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="~/Content/assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Content/assets/owlcarousel/assets/owl.theme.default.min.css">
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/assets/slide.css" rel="stylesheet" />
+    <link href="~/Content/lightslide/light.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="" title="TCL">
+                    <img src="~/Image/Logo_TCL.png" alt="TCL" class="img-responsive" width="80"/>
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="@(ViewBag.Title == "Trang chủ" ? "active" : "")" href="/" title="sản phẩm">Trang chủ</a>
+                    </li>
+                    <li>
+                        <a class="@(ViewBag.Title == "Sản phẩm" ? "active" : "")" href="/san-pham" title="sản phẩm">Sản phẩm khuyến mãi</a>
+                    </li>
+                    <li>
+                        <a class="@(ViewBag.Title == "Tin tức" ? "active" : "")" href="/bai-viet" title="bài viết">Chương trình khuyến mãi</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Content/assets/owlcarousel/owl.carousel.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var owl = $('.owl-carousel');
+            owl.owlCarousel({
+                margin: 5,
+                nav: true,
+                loop: true,
+                navText: ["<div class='nav-btn prev-slide'><span class='glyphicon glyphicon-chevron-left'></span></div>", "<div class='nav-btn next-slide'><span class='glyphicon glyphicon-chevron-right'></span></div>"],
+                responsive: {
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 6
+                    }
+                }
+            })
+        })
+    </script>
+    <script src="~/Content/lightslide/light.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#content-slider").lightSlider({
+                loop: true,
+                keyPress: true
+            });
+            $('#image-gallery').lightSlider({
+                gallery: true,
+                item: 1,
+                thumbItem: 6,
+                slideMargin: 0,
+                speed: 500,
+                loop: true,
+                onSliderLoad: function () {
+                    $('#image-gallery').removeClass('cS-hidden');
+                }
+            });
+        });
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

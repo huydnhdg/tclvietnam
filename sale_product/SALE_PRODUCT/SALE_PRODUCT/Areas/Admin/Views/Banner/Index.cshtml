@@ -1,0 +1,82 @@
+﻿@model PagedList.IPagedList<SALE_PRODUCT.Models.Banner>
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "Index";
+    var index = 0;
+}
+
+
+<div class="row">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form>
+                <div class="form-group row">
+                    <div class="col-md-2">
+                        <input class="form-control" name="textsearch" value="@ViewBag.textsearch" placeholder="Keyword" />
+                    </div>
+                    <div class="col-md-2">
+                        @Html.TextBox("start_date", ViewBag.from_date as string, new { @class = "form-control", @type = "date" })
+                    </div>
+                    <div class="col-md-2">
+                        @Html.TextBox("to_date", ViewBag.to_date as string, new { @class = "form-control", @type = "date" })
+                    </div>
+
+                </div>
+                <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i> Tìm kiếm</button>
+                <a href="/admin/banner/create" title="create" class="btn btn-info"><i class="fa fa-plus"></i> Tạo mới</a>
+            </form>
+        </div>
+    </div>
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Ngày tạo</th>
+                <th>Tiêu đề</th>
+                <th>Sắp xếp</th>
+                <th>Trạng thái</th>
+                <th>Ảnh</th>
+                <th>Link</th>
+                <th>#</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                index++;
+                <tr>
+                    <td>@index</td>
+                    <td>@item.Createdate</td>
+                    <td>@item.Title</td>
+                    <td>@item.Sort</td>
+                    <td>
+                        @if (item.Status == true)
+                        {
+                            <span class="text-success">hiển thị</span>
+                        }
+                        else
+                        {
+                            <span class="text-danger">ẩn</span>
+                        }
+                    </td>
+                    <td>
+                        @if (item.Image != null)
+                        {
+                            <img src="@item.Image" width="100" />
+                        }
+                    </td>
+                    <td>@item.Link</td>
+                    <td>
+                        <a href="/admin/banner/edit/@item.ID" title="edit" class="text-primary"><i class="fa fa-pencil"></i></a>
+                        <a href="/admin/banner/delete/@item.ID" title="delete" class="text-danger"><i class="fa fa-trash"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div>
+        <div class="showing">Showing @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount</div>
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page, textsearch = ViewBag.textsearch, start_date = ViewBag.start_date, to_date = ViewBag.to_date, chanel = ViewBag.chanel, status = ViewBag.status }))
+    </div>
+</div>
+

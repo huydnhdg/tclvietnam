@@ -1,0 +1,23 @@
+﻿@model SALE_PRODUCT.Models.News
+@{
+    ViewBag.Title = "Tin tức";
+}
+
+<h2 class="text-center">Chi tiết bài viết</h2>
+<hr />
+<div class="art-detail">
+    @if (Model != null)
+    {
+        <div class="time">@Model.Createdate</div>
+        <div class="art-content">
+            @Html.Raw(Model.Detail)
+        </div>
+    }
+    else
+    {
+        <div class="art-content">
+            <p class="text-center">Nội dung chưa được công khai</p>
+        </div>
+    }
+</div>
+

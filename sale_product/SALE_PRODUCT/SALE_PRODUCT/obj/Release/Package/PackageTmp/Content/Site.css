@@ -1,0 +1,249 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    /*font-family: Calibri;*/
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.navbar-inverse {
+    background-color: #ffc845;
+    border-color: #fff;
+}
+
+    .navbar-inverse .navbar-nav > li > a {
+        color: #fff;
+    }
+
+.top-head {
+    padding-top: 50px;
+}
+
+.p-item {
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.i-content {
+    padding: 0.625rem;
+}
+
+.name {
+    overflow-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.price {
+    font-size: 14px;
+}
+
+
+.gach {
+    color: rgb(128 128 128);
+    text-decoration: line-through;
+}
+
+.chot {
+    color: #ff6a00;
+}
+
+.i-discount {
+    position: absolute;
+    top: 5px;
+    right: 0px;
+}
+
+.rsd-prod .i-discount {
+    right: 15px;
+}
+
+.i-dis-bg {
+    display: inline-block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    padding: 2px 4px 3px;
+    background-color: rgba(255,212,36,.9);
+}
+
+    .i-dis-bg:after {
+        content: "";
+        width: 0;
+        height: 0;
+        left: 0;
+        bottom: -4px;
+        position: absolute;
+        border-color: transparent rgba(255,212,36,.9);
+        border-style: solid;
+        border-width: 0 18px 4px;
+    }
+
+.percent {
+    font-size: 13px;
+    color: #ee4d2d;
+}
+
+.wl8hrl {
+    font-size: 11px;
+    color: #fff;
+    font-weight: normal;
+}
+
+.sl-product .row {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.sl-product .col-md-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.sl-product {
+    margin-top: 50px;
+}
+
+.a-item {
+    border: 1px solid rgba(0, 0, 0, 0.09);
+}
+
+.a-item {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.a-content {
+    padding: 10px;
+}
+
+    .a-content .title {
+        overflow-wrap: break-word;
+        white-space: normal;
+        overflow: hidden;
+        display: -webkit-box;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        font-size: 18px;
+    }
+
+    .a-content .time {
+        color: gray;
+        font-size: 11px;
+    }
+
+    .a-content .des {
+        overflow-wrap: break-word;
+        white-space: normal;
+        overflow: hidden;
+        display: -webkit-box;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        text-align: justify;
+    }
+
+.lsd-menu ul {
+    padding: 0;
+}
+
+.lsd-menu li {
+    list-style: none;
+    padding: 10px 5px;
+    border-top: 1px solid rgba(0, 0, 0, 0.09);
+}
+
+    .lsd-menu li a {
+        color: #333;
+    }
+
+.lsd-menu h3 {
+    font-size: 16px;
+    color: #ff6a00;
+}
+
+.art-detail .time {
+    font-size: 11px;
+}
+
+.art-content {
+    text-align: justify;
+}
+
+.prod-name {
+    font-size: 21px;
+    font-family: Calibri;
+}
+
+.prod-des h3 {
+    font-size: 18px;
+    color: #ff6a00;
+}
+
+.navbar ul li {
+    font-size: 18px;
+    padding: 0 15px;
+    font-family: Calibri;
+}
+
+.navbar .active {
+    border-bottom: 2px solid #ff6a00;
+    color: #ff6a00 !important;
+}
+
+.item a {
+    color: unset;
+    text-align: left;
+}
+
+.art a {
+    color: unset;
+    text-align: unset;
+}
+
+.rsd-prod a {
+    color: unset;
+    text-align: unset;
+}
+
+a:hover {
+    text-decoration: none
+}
+
+.sale {
+    color: red;
+    font-weight: bold;
+}
+
+.link {
+    font-size: 13px;
+}
+
+.store img {
+    width: 100px;
+}

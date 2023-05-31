@@ -1,0 +1,796 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    var index = 0;
+}
+<style>
+    input {
+        max-width: 400px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    select {
+        max-width: 400px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    ul li {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-weight: bold;
+    }
+
+    .tab-content {
+        line-height: 21px;
+    }
+
+    ul li .fa {
+        font-size: larger;
+    }
+    thead tr td{
+        text-align:center;
+    }
+
+    .box {
+        max-width: 400px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+        .box p {
+            padding-left: 0;
+            padding-right: 0;
+            text-align: left;
+        }
+
+    @@media(max-width:684px) {
+        ul li {
+            font-size: 13px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+    }
+
+    #yorkminster p {
+        text-align: justify;
+    }
+</style>
+<div class="banner">
+    <img src="~/Content/Image/banner.png" class="img-responsive" width="100%" />
+</div>
+
+<div class="container">
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        @if (ViewBag.msg != null)
+        {
+            <li role="presentation">
+                <a href="#yorkminster" aria-controls="home" role="tab" data-toggle="tab">
+                    <i class="fa fa-bookmark" aria-hidden="true"></i> THỂ LỆ
+                </a>
+            </li>
+            <li role="presentation" class="active">
+                <a href="#yorkcastle" aria-controls="profile" role="tab" data-toggle="tab">
+                    <i class="fa fa-gift" aria-hidden="true"></i> ĐĂNG KÝ
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#yorkcastle3" aria-controls="profile" role="tab" data-toggle="tab">
+                    <i class="fa fa-gift" aria-hidden="true"></i> DANH SÁCH TUẦN
+                </a>
+            </li>
+        }
+        else
+        {
+            <li role="presentation" class="active">
+                <a href="#yorkminster" aria-controls="home" role="tab" data-toggle="tab">
+                    <i class="fa fa-bookmark" aria-hidden="true"></i> THỂ LỆ
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#yorkcastle" aria-controls="profile" role="tab" data-toggle="tab">
+                    <i class="fa fa-gift" aria-hidden="true"></i> ĐĂNG KÝ
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#yorkcastle3" aria-controls="profile" role="tab" data-toggle="tab">
+                    <i class="fa fa-list-ul" aria-hidden="true"></i> DANH SÁCH TUẦN
+                </a>
+            </li>
+        }
+
+
+
+
+
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        @if (ViewBag.msg != null)
+        {
+            <div role="tabpanel" class="tab-pane" id="yorkminster">
+                <br />
+                <h3 class="text-center">THỂ LỆ CHƯƠNG TRÌNH KHUYẾN MẠI</h3>
+                <br />
+                <p>1. Tên chương trình khuyến mại: " MÀN HÌNH SIÊU LỚN – QUÀ SIÊU TO"</p>
+                <p>2. Hàng hóa, dịch vụ khuyến mại: Các sản phẩm tivi, máy lạnh, máy giặt nhãn hiệu TCL do Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) sản xuất và phân phối.</p>
+                <p>3. Thời gian khuyến mại: 01/06/2021 đến 12/07/2021</p>
+                <p>4. Địa bàn (phạm vi) khuyến mại: Toàn quốc</p>
+                <p>5. Hình thức khuyến mại: Nhắn tin xác định trúng thưởng</p>
+                <p>6. Khách hàng của chương trình khuyến mại (đối tượng hưởng khuyến mại): Khách hàng mua sản phẩm khuyến mại theo quy định. Chương trình không áp dụng cho các nhân viên của Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) và Đại lý</p>
+                <p>7. Cơ cấu giải thưởng:</p>
+                <table class="table table-bordered">
+                    <tr>
+                        <td>Cơ cấu giải thưởng</td>
+                        <td>Nội dung giải thưởng (chi tiết nội dung và ký mã hiệu từng giải thưởng)</td>
+                        <td>Trị giá giải thưởng (VNĐ)</td>
+                        <td>Số giải</td>
+                        <td>Thành tiền (VNĐ)</td>
+                    </tr>
+                    <tr>
+                        <td>Giải Nhất</td>
+                        <td>1 Biểu tượng giày và banh vàng 24K - 3 chỉ</td>
+                        <td>19,700,000</td>
+                        <td>6</td>
+                        <td>118,200,000</td>
+                    </tr>
+                    <tr>
+                        <td>Giải Nhì</td>
+                        <td>1 Đồng tiền vàng 1 chỉ</td>
+                        <td>5,850,000</td>
+                        <td>30</td>
+                        <td>175,500,000</td>
+                    </tr>
+                    <tr>
+                        <td>Giải Ba</td>
+                        <td>Thẻ nạp điện thoại 500,000 VNĐ</td>
+                        <td>500,000</td>
+                        <td>300</td>
+                        <td>150,000,000</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            Tổng cộng
+                        </td>
+                        <td>336</td>
+                        <td>443,700,000</td>
+                    </tr>
+                </table>
+                <p>- Các Giải thưởng nhất và giải nhì không quy đổi thành tiền mặt.</p>
+                <p>- Khách hàng tham dự đăng ký nhắn tin xác nhận trúng thưởng sẽ nhận kết quả trúng thưởng sau khi mua hàng và nhắn tin tham gia thành công.</p>
+                <p style="font-weight:bold">8. Nội dung chi tiết thể lệ chương trình khuyến mại:</p>
+                <p style="font-weight:bold">8.1. Cách thức tham dự chương trình khuyến mại:</p>
+                <p>- Trong thời gian khuyến mại, khách hàng khi mua bất kỳ 01 sản phẩm tivi, máy lạnh hoặc máy giặt TCL sẽ nhận được 01 số IMEI tham gia chương trình được in trên sản phẩm khuyến mãi.</p>
+                <p>- Khách hàng sẽ nhận được số lượng số IMEI tương ứng với số sản phẩm khuyến mãi đã mua.</p>
+                <p>- Khách hàng tìm dãy số IMEI của sản phẩm ở mặt sau tivi, máy lạnh, máy giặt, trên phiếu bảo hành hoặc trên thùng sản phẩm. Mỗi sản phẩm chỉ có 01 số IMEI duy nhất, không trùng lặp. Khách hàng vào trang http://manhinhsieulon.tcl.com đăng ký tham gia chương trình bằng cách cung cấp các thông tin: họ tên, nơi mua hàng, địa chỉ, số điện thoại, số IMEI sản phẩm, hình ảnh hoá đơn và hình CMND, sau khi gửi tin thành công sẽ nhận được mã dự thưởng kèm kết quả trúng thưởng</p>
+                <p>- Thông tin khách hàng đăng ký tham gia chương trình phải đúng với thông tin trên hoá đơn mua hàng. Trường hợp thông tin đăng ký tham gia khác với thông tin hoá đơn, khách hàng phải cung cấp một trong các chứng từ sau: CMND người mua hàng hoặc giấy uỷ quyền có công chứng kèm theo khi đăng ký chương trình</p>
+                <p>- Trường hợp khách hàng trúng Giải nhất và Giải Nhì nếu thông tin đăng ký tham gia chương trình của khách hàng khác với thông tin trên hoá đơn, khách hàng buộc phải cung cấp bổ sung giấy uỷ quyền có công chứng khi nhận thưởng</p>
+                <p>- Thời hạn trang http://manhinhsieulon.tcl.com mở để nhận thông tin đăng ký và kết thúc trả mã dự thưởng kèm kết quả trúng thưởng cho khách hàng từ 0h00 ngày 01/06/2021 đến 0h00 ngày 15/07/2021</p>
+                <p style="font-weight:bold">8.2. Quy định về bằng chứng xác định trúng thưởng:</p>
+                <p>- Số mã dự thưởng là 1 dãy số gồm 06 chữ số được hệ thống tự động quay ngẫu nhiên để xác định trúng thưởng cho khách hàng sau khi khách hàng gửi tin đăng ký thành công.</p>
+                <p>- Trang http://manhinhsieulon.tcl.com sẽ gửi trả mã dự thưởng cùng kết quả trúng thưởng cho khách hàng sau khi khách hàng hoàn tất việc đăng ký tham gia chương trình khuyến mại theo quy định</p>
+                <p style="font-weight:bold">8.3. Thông báo trúng thưởng</p>
+                <p>- Sau khi xác định được khách hàng trúng thưởng, danh sách khách hàng trúng thưởng và mã dự thưởng trúng thưởng sẽ được cập nhật lên trang http://manhinhsieulon.tcl.com vào 17 giờ thứ sáu mỗi tuần</p>
+                <p>- Trong vòng 72 tiếng sau khi xác định danh sách khách hàng trúng thưởng, Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) sẽ thực hiện nhắn tin và gọi điện trực tiếp để thông báo trúng thưởng, thời gian, địa điểm, thủ tục nhận thưởng cho khách hàng trúng thưởng.</p>
+                <p style="font-weight:bold">8.4. Thời gian địa điểm, cách thức và thủ tục trao thưởng</p>
+                <p>- Khách hàng trúng thưởng sẽ nhận thưởng tại:</p>
+                <p>- Miền Nam: Chi nhánh Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) Tầng 5, Toà Nhà Lotte, 77 Trần Nhân Tôn, Phường 9, Quận 5, TP. HCM</p>
+                <p>- Miền Trung: Chi nhánh Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) 59 Ngô Gia Tự, Quận Hải Châu, TP. Đà Nẵng</p>
+                <p>- Miền Bắc: Chi nhánh Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) Tầng 6 số 168 Nguyễn Xiển, Quận Thanh Xuân, TP. Hà Nội và Phòng 503, Tòa nhà Lê Phạm, 98-100 Tô Hiệu, Phường Trại Cau, Quận Lê Chân, TP.Hải Phòng</p>
+                <p>- Trường hợp khách hàng không thể nhận thưởng tại địa điểm đã thông báo, khách hàng có thể uỷ quyền cho người khác đến nhận thưởng hoặc Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) sẽ chuyển giải thưởng đến địa chỉ khách hàng sinh sống (chi phí vận chuyển sẽ do khách hàng thanh toán, phí vận chuyển sẽ được thông báo cho khách hàng tại thời điểm khách hàng thông báo không thể nhận thưởng tại điểm nhận thưởng theo quy định).</p>
+                <p>- Đối với khách hàng nhờ Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) gửi giải thưởng đến địa chỉ khách hàng sinh sống, khách hàng phải gửi mail thông tin địa chỉ nhận quà, số điện thoại liên hệ khi nhận được thông báo trúng thưởng từ Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) vào hộp thư TCL khoi.huynhsi@tclvn.com.vn để xác nhận thông tin địa chỉ cũng như thông tin liên hệ nhận giải khi hàng chuyển đến. Thời gian Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) nhận mail xác nhận của khách hàng để chuyển phát quà từ ngày 05/06/2021 đến 17h ngày 15/08/2020. Sau khi nhận được mail xác nhận thông tin, địa chỉ nhận giải thưởng của khách hàng, Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) sẽ chuyển giải thưởng đến địa chỉ khách hàng xác nhận qua mail, phí vận chuyển sẽ được thông báo cho khách hàng trong vòng 1 ngày khi khách hàng gửi mail xác nhận, sau khi khách hàng đồng ý chi phí vận chuyển quà, trong vòng 7 ngày làm việc khách hàng sẽ nhận được giải thưởng. Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) sẽ không chịu trách nhiệm đối với giải thưởng bị thất lạc do địa chỉ khách hàng xác nhận qua mail ghi thiếu thông tin hoặc sai thông tin.</p>
+                <p>- Khi nhận thưởng Giải Nhất và Giải Nhì tại các địa điểm thông báo trên hoặc nhận thưởng thông qua đường vận chuyển khách hàng trúng thưởng phải xuất trình: giấy chứng minh nhân dân; hoá đơn mua sản phẩm khuyến mại trong thời gian chương trình; tin nhắn thông báo trúng thưởng từ Brand Name TCL VN; giấy uỷ quyền nhận thưởng (nếu có) cho nhân viên TCL tại các điểm trao thưởng nêu trên hoặc xuất trình cho nhân viên giao hàng đến địa điểm khách hàng xác nhận qua mail.</p>
+                <p>- Đối với khách hàng trúng Giải Ba, giải thưởng thể nạp điện thoại 500,000 VND, Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) sau khi kiểm tra thông tin, thời gian mua hàng trên hoá đơn sẽ thông qua nhà mạng nạp tiền trực tiếp vào số điện thoại đã đăng ký chương trình của khách hàng</p>
+                <p>- Thời gian nhận thưởng chương trình là 7 ngày làm việc sau khi danh sách khách hàng trúng thưởng được cập nhật trên trang http://manhinhsieulon.tcl.com.</p>
+                <p>- Khách hàng trúng thưởng phải chịu phí đi lại, ăn ở cho việc nhận giải thưởng của mình.</p>
+                <p>- Khách hàng trúng thưởng phải nộp thuế thu nhập không thường xuyên (nếu có) theo quy định của pháp luật hiện hành.</p>
+                <p>- Thời hạn cuối cùng Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) có trách nhiệm trao thưởng cho khách hàng trúng thưởng là 17 giờ ngày 20/08/2021</p>
+                <p style="font-weight:bold">9. Đầu mối giải đáp thắc mắc:</p>
+                <p>- Để được giải đáp các thắc mắc liên quan đến chương trình khuyến mại, khách hàng liên hệ bộ phận GTM của Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) theo số 028 3836 6111 (nhánh: 498) hoặc Hotline 1800 588 880 đề được hướng dẫn, giải đáp</p>
+                <p style="font-weight:bold">10. Các quy định khác:</p>
+                <p>- Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) sẽ sử dụng tên tuổi, địa chỉ và các hình ảnh, giọng nói của người trúng thưởng cho mục đích quảng cáo truyền thông Chương trình nếu được sự đồng ý của khách hàng.</p>
+                <p>- Trường hợp Nhân viên TCL hoặc cửa hàng đăng ký giúp khách hàng, phải sử dụng số điện thoại và tên của Khách hàng để đăng ký, không được dùng tên hoặc điện thoại của mình để đăng ký.</p>
+                <p>- Trong trường hợp xảy ra tranh chấp liên quan đến chương trình khuyến mại này, Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) có trách nhiệm trực tiếp giải quyết, nếu không thoả thuận được tranh chấp sẽ được xử lý theo quy định của pháp luật hiện hành.</p>
+                <p>- Đối với những giải thưởng không có người trúng thưởng, Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) phải có trách nhiệm trích nộp 50% giá trị đã công bố của giải thưởng đó vào ngân sách nhà nước theo quy định tại khoản 4 điều 96 Luật Thương Mại.</p>
+            </div>
+            <div role="tabpanel" class="tab-pane active" id="yorkcastle">
+                <div class="text-center">
+                    <h3>ĐĂNG KÝ THÔNG TIN</h3>
+                    <p class="text-danger">(Thông tin đăng ký phải trùng khớp với thông tin trên hoá đơn mua hàng)</p>
+                    <hr />
+                    <form method="post" action="/Home/Send" enctype="multipart/form-data" id="formpost">
+                        <input class="form-control" type="text" id="Name" name="Name" required placeholder="Họ và tên ..." />
+                        <input class="form-control" type="number" id="Phone" name="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="Số điện thoại ..." />
+                        <input class="form-control" type="text" id="BuyAdr" name="BuyAdr" required placeholder="Nơi mua hàng ..." />
+                        <select class="form-control" id="Province" name="Province" required>
+                            <option value="">--Tỉnh/ Thành phố sinh sống--</option>
+                            <option value="An Giang">An Giang</option>
+                            <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
+                            <option value="Bắc Giang">Bắc Giang</option>
+                            <option value="Bắc Kạn">Bắc Kạn</option>
+                            <option value="Bạc Liêu">Bạc Liêu</option>
+                            <option value="Bắc Ninh">Bắc Ninh</option>
+                            <option value="Bến Tre">Bến Tre</option>
+                            <option value="Bình Định">Bình Định</option>
+                            <option value="Bình Dương">Bình Dương</option>
+                            <option value="Bình Phước">Bình Phước</option>
+                            <option value="Bình Thuận">Bình Thuận</option>
+                            <option value="Cà Mau">Cà Mau</option>
+                            <option value="Cần Thơ">Cần Thơ</option>
+                            <option value="Cao Bằng">Cao Bằng</option>
+                            <option value="Đà Nẵng">Đà Nẵng</option>
+                            <option value="Đắk Lắk">Đắk Lắk</option>
+                            <option value="Đắk Nông">Đắk Nông</option>
+                            <option value="Điện Biên">Điện Biên</option>
+                            <option value="Đồng Nai">Đồng Nai</option>
+                            <option value="Đồng Tháp">Đồng Tháp</option>
+                            <option value="Gia Lai">Gia Lai</option>
+                            <option value="Hà Giang">Hà Giang</option>
+                            <option value="Hà Nam">Hà Nam</option>
+                            <option value="Hà Nội">Hà Nội</option>
+                            <option value="Hà Tĩnh">Hà Tĩnh</option>
+                            <option value="Hải Dương">Hải Dương</option>
+                            <option value="Hải Phòng">Hải Phòng</option>
+                            <option value="Hậu Giang">Hậu Giang</option>
+                            <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                            <option value="Hòa Bình">Hòa Bình</option>
+                            <option value="Hưng Yên">Hưng Yên</option>
+                            <option value="Khánh Hòa">Khánh Hòa</option>
+                            <option value="Kiên Giang">Kiên Giang</option>
+                            <option value="Kon Tum">Kon Tum</option>
+                            <option value="Lai Châu">Lai Châu</option>
+                            <option value="Lâm Đồng">Lâm Đồng</option>
+                            <option value="Lạng Sơn">Lạng Sơn</option>
+                            <option value="Lào Cai">Lào Cai</option>
+                            <option value="Long An">Long An</option>
+                            <option value="Nam Định">Nam Định</option>
+                            <option value="Nghệ An">Nghệ An</option>
+                            <option value="Ninh Bình">Ninh Bình</option>
+                            <option value="Ninh Thuận">Ninh Thuận</option>
+                            <option value="Phú Thọ">Phú Thọ</option>
+                            <option value="Phú Yên">Phú Yên</option>
+                            <option value="Quảng Bình">Quảng Bình</option>
+                            <option value="Quảng Nam">Quảng Nam</option>
+                            <option value="Quảng Ngãi">Quảng Ngãi</option>
+                            <option value="Quảng Ninh">Quảng Ninh</option>
+                            <option value="Quảng Trị">Quảng Trị</option>
+                            <option value="Sóc Trăng">Sóc Trăng</option>
+                            <option value="Sơn La">Sơn La</option>
+                            <option value="Tây Ninh">Tây Ninh</option>
+                            <option value="Thái Bình">Thái Bình</option>
+                            <option value="Thái Nguyên">Thái Nguyên</option>
+                            <option value="Thanh Hóa">Thanh Hóa</option>
+                            <option value="Thừa Thiên Huế">Thừa Thiên Huế</option>
+                            <option value="Tiền Giang">Tiền Giang</option>
+                            <option value="Trà Vinh">Trà Vinh</option>
+                            <option value="Tuyên Quang">Tuyên Quang</option>
+                            <option value="Vĩnh Long">Vĩnh Long</option>
+                            <option value="Vĩnh Phúc">Vĩnh Phúc</option>
+                            <option value="Yên Bái">Yên Bái</option>
+                        </select>
+
+
+                        @Html.DropDownList("Product", new List<SelectListItem>{
+                            new SelectListItem() {Text = "--Sản phẩm--", Value=""},
+                            new SelectListItem() {Text = "Tivi", Value="Tivi"},
+                            new SelectListItem() {Text = "Máy lạnh", Value="Máy lạnh"},
+                            new SelectListItem() {Text = "Máy giặt", Value="Máy giặt"},
+                   },
+                            new { @class = "form-control", onchange = "ChooseProduct()", @required = "required" })
+
+                        <input class="form-control" type="text" id="Serial" name="Serial" required placeholder="Serial" onchange="onchangeserial()" />
+                        <input class="form-control" type="text" id="Model" name="Model" required placeholder="Model" />
+                        <div class="box">
+                            <p class="col-xs-3">IMEI: </p>
+                            <div class="col-xs-9">
+                                <input type="file" id="Imei" name="Imei" required />
+                            </div>
+                        </div>
+                        <div class="box">
+                            <p class="col-xs-3">Hóa đơn: </p>
+                            <div class="col-xs-9">
+                                <input type="file" id="Invoice" name="Invoice" required />
+                            </div>
+                        </div>
+                        <div class="box">
+                            <p class="col-xs-3">CMND/CCCD mặt trước: </p>
+                            <div class="col-xs-9">
+                                <input type="file" id="Cmndb" name="Cmndb" required />
+                            </div>
+                        </div>
+                        <div class="box">
+                            <p class="col-xs-3">CMND/CCCD mặt sau: </p>
+                            <div class="col-xs-9">
+                                <input type="file" id="Cmnda" name="Cmnda" required />
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <hr />
+                            <p class="text-warning">
+                                Đối với trường hợp thông tin đăng ký của khách hàng không đúng với hoá đơn, vui lòng cung cấp 1 trong 2 thông tin sau:<br />
+                            </p>
+                            <p class="col-xs-3">Giấy ủy quyền: </p>
+                            <div class="col-xs-9">
+                                <input type="file" id="Extra" name="Extra" />
+                            </div>
+                        </div>
+                        <div class="box">
+                            <p class="text-warning">
+                                Hoặc
+                            </p>
+                            <p class="col-xs-3">CMND/CCCD mặt trước: </p>
+                            <div class="col-xs-9">
+                                <input type="file" id="Extra1" name="Extra1" />
+                            </div>
+                        </div>
+                        <div class="box">
+                            <p class="col-xs-3">CMND/CCCD mặt sau: </p>
+                            <div class="col-xs-9">
+                                <input type="file" id="Extra2" name="Extra2" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="text-center box">
+                                <button type="submit" class="btn btn-info" id="btnsubmit"><i class="fa fa-check" aria-hidden="true"></i> GỬI THÔNG TIN</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="yorkcastle3">
+                <br />
+                <h3 class="text-center">DANH SÁCH TRÚNG THƯỞNG TUẦN</h3>
+                <br />
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Số điện thoại</th>
+                            <th>Mã dự thưởng</th>
+                            <th>Tên giải</th>
+                            <th>Nội dung giải thưởng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in ViewBag.dstraothuong)
+                        {
+                            index++;
+                            <tr>
+                                <td>@index</td>
+                                <td>@item.Phone</td>
+                                <td>@item.Code</td>
+                                <td>
+                                    @if (item.Giai == "1")
+                                    {
+                                        <span>Giải nhất</span>
+                                    }
+                                    else if (item.Giai == "2")
+                                    {
+                                        <span>Giải nhì</span>
+                                    }
+                                    else
+                                    {
+                                        <span>Giải ba</span>
+                                    }
+                                </td>
+                                <td>
+                                    @if (item.Giai == "1")
+                                    {
+                                        <span>1 Biểu tượng giày và banh vàng 24K - 3 chỉ</span>
+                                    }
+                                    else if (item.Giai == "2")
+                                    {
+                                        <span> 1 Đồng tiền vàng (1 chỉ vàng) </span>
+                                    }
+                                    else
+                                    {
+                                        <span> Thẻ nạp điện thoại 500,000 VNĐ </span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+        else
+        {
+            <div role="tabpanel" class="tab-pane active" id="yorkminster">
+                <br />
+                <h3 class="text-center">THỂ LỆ CHƯƠNG TRÌNH KHUYẾN MẠI</h3>
+                <br />
+                <p>1. Tên chương trình khuyến mại: " MÀN HÌNH SIÊU LỚN – QUÀ SIÊU TO"</p>
+                <p>2. Hàng hóa, dịch vụ khuyến mại: Các sản phẩm tivi, máy lạnh, máy giặt nhãn hiệu TCL do Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) sản xuất và phân phối.</p>
+                <p>3. Thời gian khuyến mại: 01/06/2021 đến 12/07/2021</p>
+                <p>4. Địa bàn (phạm vi) khuyến mại: Toàn quốc</p>
+                <p>5. Hình thức khuyến mại: Nhắn tin xác định trúng thưởng</p>
+                <p>6. Khách hàng của chương trình khuyến mại (đối tượng hưởng khuyến mại): Khách hàng mua sản phẩm khuyến mại theo quy định. Chương trình không áp dụng cho các nhân viên của Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) và Đại lý</p>
+                <p>7. Cơ cấu giải thưởng:</p>
+                <table class="table table-bordered">
+                    <tr>
+                        <td>Cơ cấu giải thưởng</td>
+                        <td>Nội dung giải thưởng (chi tiết nội dung và ký mã hiệu từng giải thưởng)</td>
+                        <td>Trị giá giải thưởng (VNĐ)</td>
+                        <td>Số giải</td>
+                        <td>Thành tiền (VNĐ)</td>
+                    </tr>
+                    <tr>
+                        <td>Giải Nhất</td>
+                        <td>1 Biểu tượng giày và banh vàng 24K - 3 chỉ</td>
+                        <td>19,700,000</td>
+                        <td>6</td>
+                        <td>118,200,000</td>
+                    </tr>
+                    <tr>
+                        <td>Giải Nhì</td>
+                        <td>1 Đồng tiền vàng 1 chỉ</td>
+                        <td>5,850,000</td>
+                        <td>30</td>
+                        <td>175,500,000</td>
+                    </tr>
+                    <tr>
+                        <td>Giải Ba</td>
+                        <td>Thẻ nạp điện thoại 500,000 VNĐ</td>
+                        <td>500,000</td>
+                        <td>300</td>
+                        <td>150,000,000</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            Tổng cộng
+                        </td>
+                        <td>336</td>
+                        <td>443,700,000</td>
+                    </tr>
+                </table>
+                <p>- Các Giải thưởng nhất và giải nhì không quy đổi thành tiền mặt.</p>
+                <p>- Khách hàng tham dự đăng ký nhắn tin xác nhận trúng thưởng sẽ nhận kết quả trúng thưởng sau khi mua hàng và nhắn tin tham gia thành công.</p>
+                <p style="font-weight:bold">8. Nội dung chi tiết thể lệ chương trình khuyến mại:</p>
+                <p style="font-weight:bold">8.1. Cách thức tham dự chương trình khuyến mại:</p>
+                <p>- Trong thời gian khuyến mại, khách hàng khi mua bất kỳ 01 sản phẩm tivi, máy lạnh hoặc máy giặt TCL sẽ nhận được 01 số IMEI tham gia chương trình được in trên sản phẩm khuyến mãi.</p>
+                <p>- Khách hàng sẽ nhận được số lượng số IMEI tương ứng với số sản phẩm khuyến mãi đã mua.</p>
+                <p>- Khách hàng tìm dãy số IMEI của sản phẩm ở mặt sau tivi, máy lạnh, máy giặt, trên phiếu bảo hành hoặc trên thùng sản phẩm. Mỗi sản phẩm chỉ có 01 số IMEI duy nhất, không trùng lặp. Khách hàng vào trang http://manhinhsieulon.tcl.com đăng ký tham gia chương trình bằng cách cung cấp các thông tin: họ tên, nơi mua hàng, địa chỉ, số điện thoại, số IMEI sản phẩm, hình ảnh hoá đơn và hình CMND, sau khi gửi tin thành công sẽ nhận được mã dự thưởng kèm kết quả trúng thưởng</p>
+                <p>- Thông tin khách hàng đăng ký tham gia chương trình phải đúng với thông tin trên hoá đơn mua hàng. Trường hợp thông tin đăng ký tham gia khác với thông tin hoá đơn, khách hàng phải cung cấp một trong các chứng từ sau: CMND người mua hàng hoặc giấy uỷ quyền có công chứng kèm theo khi đăng ký chương trình</p>
+                <p>- Trường hợp khách hàng trúng Giải nhất và Giải Nhì nếu thông tin đăng ký tham gia chương trình của khách hàng khác với thông tin trên hoá đơn, khách hàng buộc phải cung cấp bổ sung giấy uỷ quyền có công chứng khi nhận thưởng</p>
+                <p>- Thời hạn trang http://manhinhsieulon.tcl.com mở để nhận thông tin đăng ký và kết thúc trả mã dự thưởng kèm kết quả trúng thưởng cho khách hàng từ 0h00 ngày 01/06/2021 đến 0h00 ngày 15/07/2021</p>
+                <p style="font-weight:bold">8.2. Quy định về bằng chứng xác định trúng thưởng:</p>
+                <p>- Số mã dự thưởng là 1 dãy số gồm 06 chữ số được hệ thống tự động quay ngẫu nhiên để xác định trúng thưởng cho khách hàng sau khi khách hàng gửi tin đăng ký thành công.</p>
+                <p>- Trang http://manhinhsieulon.tcl.com sẽ gửi trả mã dự thưởng cùng kết quả trúng thưởng cho khách hàng sau khi khách hàng hoàn tất việc đăng ký tham gia chương trình khuyến mại theo quy định</p>
+                <p style="font-weight:bold">8.3. Thông báo trúng thưởng</p>
+                <p>- Sau khi xác định được khách hàng trúng thưởng, danh sách khách hàng trúng thưởng và mã dự thưởng trúng thưởng sẽ được cập nhật lên trang http://manhinhsieulon.tcl.com vào 17 giờ thứ sáu mỗi tuần</p>
+                <p>- Trong vòng 72 tiếng sau khi xác định danh sách khách hàng trúng thưởng, Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) sẽ thực hiện nhắn tin và gọi điện trực tiếp để thông báo trúng thưởng, thời gian, địa điểm, thủ tục nhận thưởng cho khách hàng trúng thưởng.</p>
+                <p style="font-weight:bold">8.4. Thời gian địa điểm, cách thức và thủ tục trao thưởng</p>
+                <p>- Khách hàng trúng thưởng sẽ nhận thưởng tại:</p>
+                <p>- Miền Nam: Chi nhánh Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) Tầng 5, Toà Nhà Lotte, 77 Trần Nhân Tôn, Phường 9, Quận 5, TP. HCM</p>
+                <p>- Miền Trung: Chi nhánh Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) 59 Ngô Gia Tự, Quận Hải Châu, TP. Đà Nẵng</p>
+                <p>- Miền Bắc: Chi nhánh Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) Tầng 6 số 168 Nguyễn Xiển, Quận Thanh Xuân, TP. Hà Nội và Phòng 503, Tòa nhà Lê Phạm, 98-100 Tô Hiệu, Phường Trại Cau, Quận Lê Chân, TP.Hải Phòng</p>
+                <p>- Trường hợp khách hàng không thể nhận thưởng tại địa điểm đã thông báo, khách hàng có thể uỷ quyền cho người khác đến nhận thưởng hoặc Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) sẽ chuyển giải thưởng đến địa chỉ khách hàng sinh sống (chi phí vận chuyển sẽ do khách hàng thanh toán, phí vận chuyển sẽ được thông báo cho khách hàng tại thời điểm khách hàng thông báo không thể nhận thưởng tại điểm nhận thưởng theo quy định).</p>
+                <p>- Đối với khách hàng nhờ Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) gửi giải thưởng đến địa chỉ khách hàng sinh sống, khách hàng phải gửi mail thông tin địa chỉ nhận quà, số điện thoại liên hệ khi nhận được thông báo trúng thưởng từ Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) vào hộp thư TCL khoi.huynhsi@tclvn.com.vn để xác nhận thông tin địa chỉ cũng như thông tin liên hệ nhận giải khi hàng chuyển đến. Thời gian Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) nhận mail xác nhận của khách hàng để chuyển phát quà từ ngày 05/06/2021 đến 17h ngày 15/08/2020. Sau khi nhận được mail xác nhận thông tin, địa chỉ nhận giải thưởng của khách hàng, Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) sẽ chuyển giải thưởng đến địa chỉ khách hàng xác nhận qua mail, phí vận chuyển sẽ được thông báo cho khách hàng trong vòng 1 ngày khi khách hàng gửi mail xác nhận, sau khi khách hàng đồng ý chi phí vận chuyển quà, trong vòng 7 ngày làm việc khách hàng sẽ nhận được giải thưởng. Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) sẽ không chịu trách nhiệm đối với giải thưởng bị thất lạc do địa chỉ khách hàng xác nhận qua mail ghi thiếu thông tin hoặc sai thông tin.</p>
+                <p>- Khi nhận thưởng Giải Nhất và Giải Nhì tại các địa điểm thông báo trên hoặc nhận thưởng thông qua đường vận chuyển khách hàng trúng thưởng phải xuất trình: giấy chứng minh nhân dân; hoá đơn mua sản phẩm khuyến mại trong thời gian chương trình; tin nhắn thông báo trúng thưởng từ Brand Name TCL VN; giấy uỷ quyền nhận thưởng (nếu có) cho nhân viên TCL tại các điểm trao thưởng nêu trên hoặc xuất trình cho nhân viên giao hàng đến địa điểm khách hàng xác nhận qua mail.</p>
+                <p>- Đối với khách hàng trúng Giải Ba, giải thưởng thể nạp điện thoại 500,000 VND, Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) sau khi kiểm tra thông tin, thời gian mua hàng trên hoá đơn sẽ thông qua nhà mạng nạp tiền trực tiếp vào số điện thoại đã đăng ký chương trình của khách hàng</p>
+                <p>- Thời gian nhận thưởng chương trình là 7 ngày làm việc sau khi danh sách khách hàng trúng thưởng được cập nhật trên trang http://manhinhsieulon.tcl.com.</p>
+                <p>- Khách hàng trúng thưởng phải chịu phí đi lại, ăn ở cho việc nhận giải thưởng của mình.</p>
+                <p>- Khách hàng trúng thưởng phải nộp thuế thu nhập không thường xuyên (nếu có) theo quy định của pháp luật hiện hành.</p>
+                <p>- Thời hạn cuối cùng Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) có trách nhiệm trao thưởng cho khách hàng trúng thưởng là 17 giờ ngày 20/08/2021</p>
+                <p style="font-weight:bold">9. Đầu mối giải đáp thắc mắc:</p>
+                <p>- Để được giải đáp các thắc mắc liên quan đến chương trình khuyến mại, khách hàng liên hệ bộ phận GTM của Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) theo số 028 3836 6111 (nhánh: 498) hoặc Hotline 1800 588 880 đề được hướng dẫn, giải đáp</p>
+                <p style="font-weight:bold">10. Các quy định khác:</p>
+                <p>- Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) sẽ sử dụng tên tuổi, địa chỉ và các hình ảnh, giọng nói của người trúng thưởng cho mục đích quảng cáo truyền thông Chương trình nếu được sự đồng ý của khách hàng.</p>
+                <p>- Trường hợp Nhân viên TCL hoặc cửa hàng đăng ký giúp khách hàng, phải sử dụng số điện thoại và tên của Khách hàng để đăng ký, không được dùng tên hoặc điện thoại của mình để đăng ký.</p>
+                <p>- Trong trường hợp xảy ra tranh chấp liên quan đến chương trình khuyến mại này, Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) có trách nhiệm trực tiếp giải quyết, nếu không thoả thuận được tranh chấp sẽ được xử lý theo quy định của pháp luật hiện hành.</p>
+                <p>- Đối với những giải thưởng không có người trúng thưởng, Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) phải có trách nhiệm trích nộp 50% giá trị đã công bố của giải thưởng đó vào ngân sách nhà nước theo quy định tại khoản 4 điều 96 Luật Thương Mại.</p>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="yorkcastle">
+                <div class="text-center">
+                    <h3>ĐĂNG KÝ THÔNG TIN</h3>
+                    <p class="text-danger">(Thông tin đăng ký phải trùng khớp với thông tin trên hoá đơn mua hàng)</p>
+                    <hr />
+                    <form method="post" action="/Home/Send" enctype="multipart/form-data" id="formpost">
+                        <input class="form-control" type="text" id="Name" name="Name" required placeholder="Họ và tên ..." />
+                        <input class="form-control" type="number" id="Phone" name="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="Số điện thoại ..." />
+                        <input class="form-control" type="text" id="BuyAdr" name="BuyAdr" required placeholder="Nơi mua hàng ..." />
+                        <select class="form-control" id="Province" name="Province" required>
+                            <option value="">--Tỉnh/ Thành phố sinh sống--</option>
+                            <option value="An Giang">An Giang</option>
+                            <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
+                            <option value="Bắc Giang">Bắc Giang</option>
+                            <option value="Bắc Kạn">Bắc Kạn</option>
+                            <option value="Bạc Liêu">Bạc Liêu</option>
+                            <option value="Bắc Ninh">Bắc Ninh</option>
+                            <option value="Bến Tre">Bến Tre</option>
+                            <option value="Bình Định">Bình Định</option>
+                            <option value="Bình Dương">Bình Dương</option>
+                            <option value="Bình Phước">Bình Phước</option>
+                            <option value="Bình Thuận">Bình Thuận</option>
+                            <option value="Cà Mau">Cà Mau</option>
+                            <option value="Cần Thơ">Cần Thơ</option>
+                            <option value="Cao Bằng">Cao Bằng</option>
+                            <option value="Đà Nẵng">Đà Nẵng</option>
+                            <option value="Đắk Lắk">Đắk Lắk</option>
+                            <option value="Đắk Nông">Đắk Nông</option>
+                            <option value="Điện Biên">Điện Biên</option>
+                            <option value="Đồng Nai">Đồng Nai</option>
+                            <option value="Đồng Tháp">Đồng Tháp</option>
+                            <option value="Gia Lai">Gia Lai</option>
+                            <option value="Hà Giang">Hà Giang</option>
+                            <option value="Hà Nam">Hà Nam</option>
+                            <option value="Hà Nội">Hà Nội</option>
+                            <option value="Hà Tĩnh">Hà Tĩnh</option>
+                            <option value="Hải Dương">Hải Dương</option>
+                            <option value="Hải Phòng">Hải Phòng</option>
+                            <option value="Hậu Giang">Hậu Giang</option>
+                            <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                            <option value="Hòa Bình">Hòa Bình</option>
+                            <option value="Hưng Yên">Hưng Yên</option>
+                            <option value="Khánh Hòa">Khánh Hòa</option>
+                            <option value="Kiên Giang">Kiên Giang</option>
+                            <option value="Kon Tum">Kon Tum</option>
+                            <option value="Lai Châu">Lai Châu</option>
+                            <option value="Lâm Đồng">Lâm Đồng</option>
+                            <option value="Lạng Sơn">Lạng Sơn</option>
+                            <option value="Lào Cai">Lào Cai</option>
+                            <option value="Long An">Long An</option>
+                            <option value="Nam Định">Nam Định</option>
+                            <option value="Nghệ An">Nghệ An</option>
+                            <option value="Ninh Bình">Ninh Bình</option>
+                            <option value="Ninh Thuận">Ninh Thuận</option>
+                            <option value="Phú Thọ">Phú Thọ</option>
+                            <option value="Phú Yên">Phú Yên</option>
+                            <option value="Quảng Bình">Quảng Bình</option>
+                            <option value="Quảng Nam">Quảng Nam</option>
+                            <option value="Quảng Ngãi">Quảng Ngãi</option>
+                            <option value="Quảng Ninh">Quảng Ninh</option>
+                            <option value="Quảng Trị">Quảng Trị</option>
+                            <option value="Sóc Trăng">Sóc Trăng</option>
+                            <option value="Sơn La">Sơn La</option>
+                            <option value="Tây Ninh">Tây Ninh</option>
+                            <option value="Thái Bình">Thái Bình</option>
+                            <option value="Thái Nguyên">Thái Nguyên</option>
+                            <option value="Thanh Hóa">Thanh Hóa</option>
+                            <option value="Thừa Thiên Huế">Thừa Thiên Huế</option>
+                            <option value="Tiền Giang">Tiền Giang</option>
+                            <option value="Trà Vinh">Trà Vinh</option>
+                            <option value="Tuyên Quang">Tuyên Quang</option>
+                            <option value="Vĩnh Long">Vĩnh Long</option>
+                            <option value="Vĩnh Phúc">Vĩnh Phúc</option>
+                            <option value="Yên Bái">Yên Bái</option>
+                        </select>
+
+
+                        @Html.DropDownList("Product", new List<SelectListItem>{
+                            new SelectListItem() {Text = "--Sản phẩm--", Value=""},
+                            new SelectListItem() {Text = "Tivi", Value="Tivi"},
+                            new SelectListItem() {Text = "Máy lạnh", Value="Máy lạnh"},
+                            new SelectListItem() {Text = "Máy giặt", Value="Máy giặt"},
+                   },
+                            new { @class = "form-control", onchange = "ChooseProduct()", @required = "required" })
+
+                        <input class="form-control" type="text" id="Serial" name="Serial" required placeholder="Serial" onchange="onchangeserial()" />
+                        <input class="form-control" type="text" id="Model" name="Model" required placeholder="Model" />
+                        <div class="box">
+                            <p class="col-xs-3">IMEI: </p>
+                            <div class="col-xs-9">
+                                <input type="file" id="Imei" name="Imei" required />
+                            </div>
+                        </div>
+                        <div class="box">
+                            <p class="col-xs-3">Hóa đơn: </p>
+                            <div class="col-xs-9">
+                                <input type="file" id="Invoice" name="Invoice" required />
+                            </div>
+                        </div>
+                        <div class="box">
+                            <p class="col-xs-3">CMND/CCCD mặt trước: </p>
+                            <div class="col-xs-9">
+                                <input type="file" id="Cmndb" name="Cmndb" required />
+                            </div>
+                        </div>
+                        <div class="box">
+                            <p class="col-xs-3">CMND/CCCD mặt sau: </p>
+                            <div class="col-xs-9">
+                                <input type="file" id="Cmnda" name="Cmnda" required />
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <hr />
+                            <p class="text-warning">
+                                Đối với trường hợp thông tin đăng ký của khách hàng không đúng với hoá đơn, vui lòng cung cấp 1 trong 2 thông tin sau:<br />
+                            </p>
+                            <p class="col-xs-3">Giấy ủy quyền: </p>
+                            <div class="col-xs-9">
+                                <input type="file" id="Extra" name="Extra" />
+                            </div>
+                        </div>
+                        <div class="box">
+                            <p class="text-warning">
+                                Hoặc
+                            </p>
+                            <p class="col-xs-3">CMND/CCCD mặt trước: </p>
+                            <div class="col-xs-9">
+                                <input type="file" id="Extra1" name="Extra1" />
+                            </div>
+                        </div>
+                        <div class="box">
+                            <p class="col-xs-3">CMND/CCCD mặt sau: </p>
+                            <div class="col-xs-9">
+                                <input type="file" id="Extra2" name="Extra2" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="text-center box">
+                                <button type="submit" class="btn btn-info" id="btnsubmit"><i class="fa fa-check" aria-hidden="true"></i> GỬI THÔNG TIN</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="yorkcastle3">
+                <br />
+                <h3 class="text-center">DANH SÁCH TRÚNG THƯỞNG TUẦN</h3>
+                <br />
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Số điện thoại</th>
+                            <th>Mã dự thưởng</th>
+                            <th>Tên giải</th>
+                            <th>Nội dung giải thưởng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in ViewBag.dstraothuong)
+                        {
+                            index++;
+                            <tr>
+                                <td>@index</td>
+                                <td>@item.Phone</td>
+                                <td>@item.Code</td>
+                                <td>
+                                    @if (item.Giai == "1")
+                                    {
+                                        <span>Giải nhất</span>
+                                    }
+                                    else if (item.Giai == "2")
+                                    {
+                                        <span>Giải nhì</span>
+                                    }
+                                    else
+                                    {
+                                        <span>Giải ba</span>
+                                    }
+                                </td>
+                                <td>
+                                    @if (item.Giai == "1")
+                                    {
+                                        <span>1 Biểu tượng giày và banh vàng 24K - 3 chỉ</span>
+                                    }
+                                    else if (item.Giai == "2")
+                                    {
+                                        <span> 1 Đồng tiền vàng (1 chỉ vàng) </span>
+                                    }
+                                    else
+                                    {
+                                        <span> Thẻ nạp điện thoại 500,000 VNĐ </span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+
+
+    </div>
+</div>
+@if (ViewBag.msg != null)
+{
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title text-center text-danger">THÔNG BÁO</h3>
+                </div>
+                <div class="modal-body">
+
+                    <p class="text-justify">
+                        @ViewBag.msg
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+}
+
+
+
+
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('#myModal').modal('show');
+        });
+    </script>
+    <script>
+        $('#formpost').submit(function () {
+            var phone = $("#Phone").val();
+            if (phone.length != 10) {
+                alert('Số điện thoại không đúng. Hãy kiểm tra lại');
+                return false;
+            }
+            var product = $("#Product").val();
+            var serial = $("#Serial").val();
+
+            if (product == "Tivi") {
+                if (serial.length != 19) {
+                    alert("Serial Tivi chưa đúng. Hãy kiểm tra lại");
+                    return false;
+                }
+            } else if (product == "Máy lạnh") {
+                if (serial.length != 20) {
+                    alert("Serial Máy lạnh chưa đúng. Hãy kiểm tra lại");
+                    return false;
+                }
+            }
+            else if (product == "Máy giặt") {
+                if (serial.length != 26) {
+                    alert("Serial Máy giặt chưa đúng. Hãy kiểm tra lại");
+                    return false;
+                }
+            }
+            else {
+                alert("Chọn sản phẩm");
+                return false;
+            }
+            //var $fileUpload = $("#Extra");
+            //if (parseInt($fileUpload.get(0).files.length) > 0 && parseInt($fileUpload.get(0).files.length) != 2) {
+            //    alert("Upload đúng 2 ảnh chương trình yêu cầu");
+            //    return false;
+            //}
+        });
+    </script>
+    <script>
+        function onchangeserial() {
+            var product = $("#Product").val();
+            var serial = $("#Serial").val();
+            if (product == "Tivi") {
+                if (serial.length != 19) {
+                    alert("Serial Tivi chưa đúng. Hãy kiểm tra lại");
+                }
+            } else if (product == "Máy lạnh") {
+                if (serial.length != 20) {
+                    alert("Serial Máy lạnh chưa đúng. Hãy kiểm tra lại");
+                }
+            }
+            else if (product == "Máy giặt") {
+                if (serial.length != 26) {
+                    alert("Serial Máy giặt chưa đúng. Hãy kiểm tra lại");
+                }
+            }
+            else {
+                alert("Chọn sản phẩm");
+            }
+        }
+
+    </script>
+}

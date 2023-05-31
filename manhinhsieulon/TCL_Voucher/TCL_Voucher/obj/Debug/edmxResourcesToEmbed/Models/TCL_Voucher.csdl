@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TCL_VoucherModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="TCL_VoucherEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Maduthuongs" EntityType="TCL_VoucherModel.Maduthuong" />
+    <EntitySet Name="SentBrandnames" EntityType="TCL_VoucherModel.SentBrandname" />
+    <EntitySet Name="Blacklists" EntityType="TCL_VoucherModel.Blacklist" />
+    <EntitySet Name="Contacts" EntityType="TCL_VoucherModel.Contact" />
+  </EntityContainer>
+  <EntityType Name="Maduthuong">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Activedate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SentBrandname">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Createdate" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Blacklist">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IMEI" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Province" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EMEI" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="INVOICE" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Createdate" Type="DateTime" Precision="3" />
+    <Property Name="Model" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BuyAdr" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Product" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CMNDB" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CMNDA" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Extra" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Extra1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Extra2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Serial" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Maduthuong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="Int32" />
+  </EntityType>
+</Schema>

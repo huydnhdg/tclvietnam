@@ -1,0 +1,745 @@
+﻿@model TCL_Voucher.Models.VongQuay
+@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+    input {
+        max-width: 400px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    select {
+        max-width: 400px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    ul li {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-weight: bold;
+    }
+
+    .tab-content {
+        line-height: 21px;
+    }
+
+    ul li .fa {
+        font-size: larger;
+    }
+
+    .tab-content table tr:first-child td {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .box {
+        max-width: 400px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+        .box p {
+            padding-left: 0;
+            padding-right: 0;
+            text-align: left;
+        }
+
+    @@media(max-width:684px) {
+        ul li {
+            font-size: 13px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+    }
+
+    #yorkminster p {
+        text-align: justify;
+    }
+
+    #yorkminster table tr td {
+        text-align: center
+    }
+
+    .modal-content {
+        border: 0px solid rgba(0,0,0,.2);
+    }
+
+    text {
+        font-size: 21px;
+        fill: white;
+        font-family: Tahoma;
+    }
+
+    #bao {
+        background-image: url(/Content/Winwheel/bgspin.png);
+        width: 600px;
+        height: 600px;
+        padding: 48px 38px 38px 38px;
+        background-size: contain;
+        margin: 0 auto;
+    }
+
+    @@media(min-width:992px) {
+        #bao {
+            width: 600px;
+            height: 600px;
+            padding: 48px 0px 0px 38px;
+            margin: 0 auto;
+        }
+    }
+
+    @@media(max-width:576px) {
+        #bao {
+            width: 300px;
+            height: 300px;
+            padding: 25px 0px 0px 20px;
+            margin: 0 auto;
+        }
+
+        text {
+            font-size: 8px;
+            fill: white;
+            font-family: Tahoma;
+        }
+    }
+</style>
+<div class="banner">
+    <img src="~/Image/banner.jpg" class="img-responsive" width="100%" />
+</div>
+<div class="container">
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation">
+            <a href="#yorkminster" aria-controls="home" role="tab" data-toggle="tab">
+                <i class="fa fa-bookmark" aria-hidden="true"></i> THỂ LỆ
+            </a>
+        </li>
+        <li role="presentation" class="active">
+            <a href="#yorkcastle" aria-controls="profile" role="tab" data-toggle="tab">
+                <i class="fa fa-gift" aria-hidden="true"></i> ĐĂNG KÝ
+            </a>
+        </li>
+
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane" id="yorkminster">
+            <br />
+            <h3 class="text-center">THỂ LỆ CHƯƠNG TRÌNH KHUYẾN MẠI</h3>
+            <br />
+            <p>
+                1. Tên chương trình khuyến mãi: <b>"QUỐC KHÁNH TẠI GIA, QUAY LÀ TRÚNG QUÀ"</b><br />
+                2. Hàng hóa, dịch vụ khuyến mãi:
+            </p>
+            <table class="table table-bordered">
+                <tr>
+                    <td>STT</td>
+                    <td>Phân Loại</td>
+                    <td>Model</td>
+                    <td>Size</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>TV</td>
+                    <td>C825, C728, C725, C726, Q726</td>
+                    <td>50”, 55”, 65”, 75”</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>AC</td>
+                    <td>TPG-11</td>
+                    <td>1HP, 1.5HP, 2HP, 2.5HP</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>WM</td>
+                    <td>M03</td>
+                    <td>8KG, 9KG, 10KG</td>
+                </tr>
+            </table>
+            <p>
+                3. Thời gian khuyến mãi: <b>01/09/2021</b> đến <b>21/09/2021</b><br />
+                4. Địa bàn (phạm vi) khuyến mãi: Các kênh siêu thị điện máy Chợ Lớn, DMX, Nguyễn Kim, Pico, Media Mart và VHC<br />
+                5. Hình thức khuyến mãi: Khách hàng mua sản phẩm TV TCL theo danh sách áp dụng, tham gia vòng quay may mắn có cơ hội nhận được thẻ nạp điện thoại hoặc hoàn tiền điện trực tiếp qua ZaloPay<br />
+                6. Khách hàng của chương trình khuyến mãi (đối tượng hưởng khuyến mãi): Khách hàng mua sản phẩm khuyến mãi theo quy định.<br />
+                7. Cơ cấu quà tặng:<br />
+            </p>
+            <table class="table table-bordered">
+                <tr>
+                    <td>STT</td>
+                    <td>Hình thức</td>
+                    <td>Nội dung quà tặng</td>
+                    <td>
+                        Giá trị quà tặng
+                        <br />
+                        (VNĐ)
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td rowspan="6" style="vertical-align:middle">Vòng quay may mắn</td>
+                    <td>Thẻ nạp điện thoại</td>
+                    <td>100,000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Thẻ nạp điện thoại</td>
+                    <td>200,000</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Hoàn tiền điện tử ZaloPay</td>
+                    <td>300,000</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Hoàn tiền điện tử ZaloPay</td>
+                    <td>400,000</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Hoàn tiền điện tử ZaloPay</td>
+                    <td>500,000</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Hoàn tiền điện tử ZaloPay</td>
+                    <td>1,000,000</td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <b>TỔNG GIÁ TRỊ GIẢI THƯỞNG</b>
+                    </td>
+                    <td><b>144,595,000 VNĐ</b></td>
+                </tr>
+            </table>
+            <p>
+                <b>I. Cách thức tham dự chương trình khuyến mãi:</b><br />
+                - Khách hàng sau khi mua sản phẩm khuyến mãi theo quy định tham gia chương trình bằng cách:
+            </p>
+            <p>
+                · Khách hàng truy cập trang <a href="http://sansetiendien.tcl.com/">http://sansetiendien.tcl.com</a> hoặc quét mã QR Code và điền thông tin như : Họ tên, số điện thoại, tỉnh/ thành, nơi mua sản phẩm, model, kích thước, chụp hình hoá đơn. Sau khi cập nhật thông tin thành công, khách hàng sẽ được tham gia vòng quay may mắn và nhận được phần thưởng của chương trình, hệ thống sẽ thông báo cho khách hàng thời gian và cách thức nhận quà<br />
+                <b>Lưu ý:</b> Thông tin đăng ký chương trình phải đúng với thông tin mua hàng trên hoá đơn. Trường hợp Nhân viên TCL hoặc cửa hàng đăng ký giúp khách hàng, phải sử dụng số điện thoại và tên của Khách hàng để đăng ký, không được dùng tên hoặc điện thoại của mình để đăng ký.
+            </p>
+            <p>
+                <b>II. Quy định về thời gian, cách thức và thủ tục nhận giải:</b><br />
+                - Sau khi kiểm tra thông tin khách hàng cung cấp, trong vòng 7 - 10 ngày làm việc, TCL sẽ chuyển thẻ nạp điện thoại vào tài khoản số điện thoại đăng ký hoặc chuyển tiền trực tiếp qua ứng dụng ZaloPay cho khách hàng thông qua số điện thoại đã đăng ký.<br />
+                - Khách hàng tham gia chương trình, cần tạo tài khoản thanh toán điện tử Zalo Pay. Và đã tiến hành định danh xác thực tài khoản. Trường hợp tài khoản chưa định danh, tài khoản khách hàng không đủ điều kiện để nhận thưởng.<br />
+                - Hướng dẫn định danh tài khoản ZaloPay: Người tiêu dùng tải và đăng nhập ZaloPay > Chọn Cá nhân > Chọn Thông tin cá nhân > Chọn Định danh tài khoản hoặc truy cập vào link sau để được hướng dẫn chi tiết <a href="http://sbsupport.zalopay.vn/support/solutions/articles/43000489506-c%C3%A1ch-%C4%91%E1%BB%8Bnh-danh-t%C3%A0i-kho%E1%BA%A3n-zalopay">https://cutt.ly/ZbRG4bn</a> <br />
+                - Thời gian cuối cùng Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) trao quà cho khách hàng là 17 giờ ngày <b>01/10/2021</b>.
+            </p>
+            <p>
+                <b>III. Các quy định khác:</b><br />
+                - Trong trường hợp xảy ra tranh chấp liên quan đến chương trình khuyến mãi này, Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) có trách nhiệm trực tiếp giải quyết. Trong trường hợp không thể thoả thuận, tranh chấp sẽ được xử lý theo quy định của pháp luật hiện hành.<br />
+                - Mỗi sản phẩm tương ứng với 1 lượt tham gia, khách hàng tối đa được tham gia ba lần, tương tự nhận được ba phần quà.<br />
+                - Để được giải đáp các thắc mắc liên quan đến chương trình khuyến mãi, khách hàng liên hệ bộ phận GTM của Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) theo tài khoản Zalo: TCL VIỆT NAM hoặc hộp thư ngan.langngockim@tclvn.com.vn.<br />
+            </p>
+        </div>
+        <div role="tabpanel" class="tab-pane active" id="yorkcastle">
+            <div class="text-center">
+                <h3>ĐĂNG KÝ THÔNG TIN</h3>
+                <p class="text-danger">(Thông tin đăng ký phải trùng khớp với thông tin trên hoá đơn mua hàng)</p>
+                <hr />
+                <form method="post" enctype="multipart/form-data" id="formpost">
+                    <input value="@Model.ID" class="form-control hidden" type="text" id="ID" name="ID" />
+                    <input value="@Model.PAYMENT" class="form-control hidden" type="text" id="PAYMENT" name="PAYMENT" />
+                    <input value="@Model.Name" class="form-control" type="text" id="Name" name="Name" required placeholder="Họ và tên ..." />
+                    <input value="@Model.Phone" class="form-control" type="number" id="Phone" name="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="Số điện thoại ..." />
+
+                    <select class="form-control" id="BuyAdr" name="BuyAdr" required>
+                        <option value="">--Nơi mua hàng--</option>
+                        <option value="Điện máy Chợ Lớn">Điện máy Chợ Lớn</option>
+                        <option value="Điện máy xanh">Điện máy xanh</option>
+                        <option value="Điện máy Nguyễn Kim">Điện máy Nguyễn Kim</option>
+                        <option value="Điện máy Pico">Điện máy Pico</option>
+                        <option value="Điện máy HC">Điện máy HC</option>
+                        <option value="Điện máy Media Mart">Điện máy Media Mart</option>
+                    </select>
+                    <select class="form-control" id="Province" name="Province" required>
+                        <option value="">--Tỉnh/ Thành phố sinh sống--</option>
+                        <option value="An Giang">An Giang</option>
+                        <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
+                        <option value="Bắc Giang">Bắc Giang</option>
+                        <option value="Bắc Kạn">Bắc Kạn</option>
+                        <option value="Bạc Liêu">Bạc Liêu</option>
+                        <option value="Bắc Ninh">Bắc Ninh</option>
+                        <option value="Bến Tre">Bến Tre</option>
+                        <option value="Bình Định">Bình Định</option>
+                        <option value="Bình Dương">Bình Dương</option>
+                        <option value="Bình Phước">Bình Phước</option>
+                        <option value="Bình Thuận">Bình Thuận</option>
+                        <option value="Cà Mau">Cà Mau</option>
+                        <option value="Cần Thơ">Cần Thơ</option>
+                        <option value="Cao Bằng">Cao Bằng</option>
+                        <option value="Đà Nẵng">Đà Nẵng</option>
+                        <option value="Đắk Lắk">Đắk Lắk</option>
+                        <option value="Đắk Nông">Đắk Nông</option>
+                        <option value="Điện Biên">Điện Biên</option>
+                        <option value="Đồng Nai">Đồng Nai</option>
+                        <option value="Đồng Tháp">Đồng Tháp</option>
+                        <option value="Gia Lai">Gia Lai</option>
+                        <option value="Hà Giang">Hà Giang</option>
+                        <option value="Hà Nam">Hà Nam</option>
+                        <option value="Hà Nội">Hà Nội</option>
+                        <option value="Hà Tĩnh">Hà Tĩnh</option>
+                        <option value="Hải Dương">Hải Dương</option>
+                        <option value="Hải Phòng">Hải Phòng</option>
+                        <option value="Hậu Giang">Hậu Giang</option>
+                        <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                        <option value="Hòa Bình">Hòa Bình</option>
+                        <option value="Hưng Yên">Hưng Yên</option>
+                        <option value="Khánh Hòa">Khánh Hòa</option>
+                        <option value="Kiên Giang">Kiên Giang</option>
+                        <option value="Kon Tum">Kon Tum</option>
+                        <option value="Lai Châu">Lai Châu</option>
+                        <option value="Lâm Đồng">Lâm Đồng</option>
+                        <option value="Lạng Sơn">Lạng Sơn</option>
+                        <option value="Lào Cai">Lào Cai</option>
+                        <option value="Long An">Long An</option>
+                        <option value="Nam Định">Nam Định</option>
+                        <option value="Nghệ An">Nghệ An</option>
+                        <option value="Ninh Bình">Ninh Bình</option>
+                        <option value="Ninh Thuận">Ninh Thuận</option>
+                        <option value="Phú Thọ">Phú Thọ</option>
+                        <option value="Phú Yên">Phú Yên</option>
+                        <option value="Quảng Bình">Quảng Bình</option>
+                        <option value="Quảng Nam">Quảng Nam</option>
+                        <option value="Quảng Ngãi">Quảng Ngãi</option>
+                        <option value="Quảng Ninh">Quảng Ninh</option>
+                        <option value="Quảng Trị">Quảng Trị</option>
+                        <option value="Sóc Trăng">Sóc Trăng</option>
+                        <option value="Sơn La">Sơn La</option>
+                        <option value="Tây Ninh">Tây Ninh</option>
+                        <option value="Thái Bình">Thái Bình</option>
+                        <option value="Thái Nguyên">Thái Nguyên</option>
+                        <option value="Thanh Hóa">Thanh Hóa</option>
+                        <option value="Thừa Thiên Huế">Thừa Thiên Huế</option>
+                        <option value="Tiền Giang">Tiền Giang</option>
+                        <option value="Trà Vinh">Trà Vinh</option>
+                        <option value="Tuyên Quang">Tuyên Quang</option>
+                        <option value="Vĩnh Long">Vĩnh Long</option>
+                        <option value="Vĩnh Phúc">Vĩnh Phúc</option>
+                        <option value="Yên Bái">Yên Bái</option>
+                    </select>
+
+                    <select class="form-control" id="Product" name="Product" required onchange="ChooseProduct()">
+                        <option value="">--Chọn Sản Phẩm--</option>
+                        <option value="TV">TV</option>
+                        <option value="AC">AC</option>
+                        <option value="WM">WM</option>
+                    </select>
+                    <select class="form-control" id="Model" name="Model" required>
+                        <option value="">--Chọn Model--</option>
+                    </select>
+                    <select class="form-control" id="Size" name="Size" required>
+                        <option value="">--Chọn kích thước--</option>
+                    </select>
+
+                    <div class="box">
+                        <p class="col-xs-3">Hóa đơn: </p>
+                        <div class="col-xs-9">
+                            <input type="file" id="Invoice" name="Invoice" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="text-center box">
+                            <a href="#" @*type="submit"*@ class="btn btn-info" @*id="btnsubmit"*@><i class="fa fa-check" aria-hidden="true"></i> GỬI THÔNG TIN</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <button type="button" class="close" onclick="window.location.reload();" style="font-size:38px; font-weight:800;color:red">&times;</button>
+        <div id="bao">
+            <div id="chart"></div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div id="Success" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" data-backdrop="static" data-keyboard="false">&times;</button>
+                <h3 class="modal-title text-center text-danger">THÔNG BÁO</h3>
+            </div>
+            <div class="modal-body">
+                <p style="color:red; text-align:center;" id="rsgiai"></p>
+            </div>
+        </div>
+
+    </div>
+</div>
+@section scripts{
+    <script src="~/Content/Winwheel/d3.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        var padding = { top: 0, right: 0, bottom: 0, left: 0 },
+            w = 505,
+            h = 505,
+            r = Math.min(w, h) / 2,
+            rotation = 0,
+            oldrotation = 0,
+            picked = 100000,
+            oldpick = [],
+            color = d3.scale.category20c();//category20c()
+        var width = Math.max(window.screen.width, window.innerWidth);
+        if (width < 576) {
+            w = 250;
+            h = 250;
+            r = Math.min(w, h) / 2;
+        }
+        var data = [
+
+            { "label": "Thẻ nạp 100K", "value": 100 }, //font-family
+            { "label": "Thẻ nạp 200K", "value": 200 }, //color
+            { "label": "Hoàn tiền 300K", "value": 300 }, //font-weight
+            { "label": "Hoàn tiền 400K", "value": 400 }, //font-size
+            { "label": "Hoàn tiền 500K", "value": 500 }, //background-color
+            { "label": "Thẻ nạp 200K", "value": 200 }, //nesting
+            { "label": "Thẻ nạp 100K", "value": 100 }, //bottom
+            { "label": "Hoàn tiền 1000K", "value": 1000 }, //sans-serif
+
+        ];
+        var svg = d3.select('#chart')
+            .append("svg")
+            .data([data])
+            .attr("width", w + padding.left + padding.right)
+            .attr("height", h + padding.top + padding.bottom);
+
+        var container = svg.append("g")
+            .attr("class", "chartholder")
+            .attr("transform", "translate(" + (w / 2 + padding.left) + "," + (h / 2 + padding.top) + ")");
+        var vis = container
+            .append("g");
+
+        var pie = d3.layout.pie().sort(null).value(function (d) { return 1; });
+        // declare an arc generator function
+        var arc = d3.svg.arc().outerRadius(r);
+        // select paths, use arc generator to draw
+        var cl = function (c) {
+            var t = ["#e34747", "#2cb075", "#faa62a", "#429ed5", "#f1592a", "#faa62a", "#429ed5", "#faa62a", "#2cb075", "#429ed5", "#faa62a"]
+            return t[c];
+        }
+        var arcs = vis.selectAll("g.slice")
+            .data(pie)
+            .enter()
+            .append("g")
+            .attr("class", "slice");
+
+        arcs.append("path")
+            .attr("fill", function (d, i) {
+                return cl(i);
+            })
+            .attr("d", function (d) { return arc(d); });
+        // add the text
+        arcs.append("text").attr("transform", function (d) {
+            d.innerRadius = 0;
+            d.outerRadius = r;
+            d.angle = (d.startAngle + d.endAngle) / 2;
+            return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")translate(" + (d.outerRadius - 10) + ")";
+        })
+            .attr("text-anchor", "end")
+            .text(function (d, i) {
+                return data[i].label;
+            });
+
+        container.on("click", spin);
+        function spin(d) {
+
+            container.on("click", null);
+            //all slices have been seen, all done
+            if (oldpick.length == data.length) {
+                container.on("click", null);
+                return;
+            }
+
+
+            var ps = 360 / data.length,
+                pieslice = Math.round(1440 / data.length),
+                rd = Math.random(),
+                rng = Math.floor((rd * 1440) + 360);
+            rotation = (Math.round(rng / ps) * ps);
+            picked = Math.round(data.length - (rotation % 360) / ps);
+            picked = picked >= data.length ? (picked % data.length) : picked;
+            //fix rate to winning
+            //-----------------------------------------
+
+            //fix winning
+            //ví dụ nếu quay ra giải nhất check xem còn không
+            //nếu còn thì ok
+            //nếu không còn thì random lại để check lại
+            let index = -1;
+            let itemm = 1;
+            do {
+                index = Math.floor(Math.random() * 100);
+                console.log("index: " + index);
+            } while (itemm < 1);
+            var PAYMENT = $('#PAYMENT').val();
+            console.log("PAYMENT " + PAYMENT);
+            index = PAYMENT;
+            //-----------------------------------------
+            if (index == 100) {
+                console.log("100k");
+                var item = Math.floor(Math.random() * 2);
+                if (item == 0) {
+                    picked = 0;
+                    rng = 1793;
+                    rotation = 1867;
+                } else {
+                    picked = 6;
+                    rng = 1166;
+                    rotation = 1237;
+                }
+            }
+            else if (index == 200) {
+                console.log("200k");
+                var item2 = Math.floor(Math.random() * 2);
+                if (item2 == 0) {
+                    picked = 1;
+                    rng = 1013;
+                    rotation = 1102;
+                } else {
+                    picked = 5;
+                    rng = 1203;
+                    rotation = 1282;
+                }
+            }
+            else if (index == 300) {
+                console.log("300k");
+                picked = 2;
+                rng = 1002;
+                rotation = 1057;
+            }
+            else if (index == 400) {
+                console.log("400k");
+                picked = 3;
+                rng = 1663;
+                rotation = 1732;
+            }
+            else if (index == 500) {
+                console.log("500k");
+                picked = 4;
+                rng = 1609;
+                rotation = 1687;
+            }
+            else if (index == 1000) {
+                console.log("1000k");
+                picked = 7;
+                rng = 1478;
+                rotation = 1552;
+            }
+            //if (index > 1 && index <= 30) {
+            //    console.log("100k");
+            //    var item = Math.floor(Math.random() * 2);
+            //    if (item == 0) {
+            //        picked = 0;
+            //        rng = 1793;
+            //        rotation = 1867;
+            //    } else {
+            //        picked = 6;
+            //        rng = 1166;
+            //        rotation = 1237;
+            //    }
+            //}
+            //else if (index > 30 && index <= 56) {
+            //    console.log("200k");
+            //    var item2 = Math.floor(Math.random() * 2);
+            //    if (item2 == 0) {
+            //        picked = 1;
+            //        rng = 1013;
+            //        rotation = 1102;
+            //    } else {
+            //        picked = 5;
+            //        rng = 1203;
+            //        rotation = 1282;
+            //    }
+            //}
+            //else if (index > 56 && index <= 76) {
+            //    console.log("300k");
+            //    picked = 2;
+            //    rng = 1002;
+            //    rotation = 1057;
+            //}
+            //else if (index > 76 && index <= 91) {
+            //    console.log("400k");
+            //    picked = 3;
+            //    rng = 1663;
+            //    rotation = 1732;
+            //}
+            //else if (index > 91 && index <= 97) {
+            //    console.log("500k");
+            //    picked = 4;
+            //    rng = 1609;
+            //    rotation = 1687;
+            //}
+            //else if ((index = 0) || (index > 97 && index < 100)) {
+            //    console.log("1000k");
+            //    picked = 7;
+            //    rng = 1478;
+            //    rotation = 1552;
+            //}
+            //rotation += 90 - Math.round(ps / 2);
+            console.log("rng " + rng);
+            console.log("rotation " + rotation);
+            console.log("picked " + picked);
+
+
+            vis.transition()
+                .duration(5000)
+                .attrTween("transform", rotTween)
+                .each("end", function () {
+                    addDatatoSql(data[picked].value);
+                });
+        }
+
+        if (width < 576) {
+            container.append("circle")
+                .attr("cx", 0)
+                .attr("cy", 0)
+                .attr("r", 30)
+                .style({ "fill": "white", "cursor": "pointer" });
+            container.append("text")
+                .attr("x", 0)
+                .attr("y", 10)
+                .attr("text-anchor", "middle")
+                .text("QUAY")
+                .style({ "font-weight": "bold", "font-size": "14px", "fill": "gray", "font-family": "Tahoma" });
+        }
+        else {
+            container.append("circle")
+                .attr("cx", 0)
+                .attr("cy", 0)
+                .attr("r", 60)
+                .style({ "fill": "white", "cursor": "pointer" });
+            container.append("text")
+                .attr("x", 0)
+                .attr("y", 15)
+                .attr("text-anchor", "middle")
+                .text("QUAY")
+                .style({ "font-weight": "bold", "font-size": "30px", "fill": "gray", "font-family": "Tahoma" });
+        }
+
+        function rotTween(to) {
+            var i = d3.interpolate(oldrotation % 360, rotation);
+            return function (t) {
+                return "rotate(" + i(t) + ")";
+            };
+        }
+        function getRandomNumbers() {
+            var array = new Uint16Array(1000);
+            var scale = d3.scale.linear().range([360, 1440]).domain([0, 100000]);
+            if (window.hasOwnProperty("crypto") && typeof window.crypto.getRandomValues === "function") {
+                window.crypto.getRandomValues(array);
+                console.log("works");
+            } else {
+                //no support for crypto, get crappy random numbers
+                for (var i = 0; i < 1000; i++) {
+                    array[i] = Math.floor(Math.random() * 100000) + 1;
+                }
+            }
+            return array;
+        }
+        function addDatatoSql(giai) {
+            var ID = $('#ID').val();
+            $.ajax
+                ({
+                    url: '/vongquay/savedata',
+                    type: 'POST',
+                    datatype: 'application/json',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        giai: giai, ID: ID
+                    }),
+                    success: function (result) {
+                        if (result.PAYMENT == "100" || result.PAYMENT == "200") {
+                            $('#rsgiai').html('CHÚC MỪNG ! BẠN SẼ NHẬN ĐƯỢC THẺ NẠP ĐIỆN THOẠI ' + result.PAYMENT + '.000đ.');
+                        } else {
+                            $('#rsgiai').html('CHÚC MỪNG ! BẠN SẼ ĐƯỢC HOÀN ' + result.PAYMENT + '.000đ VÀO TÀI KHOẢN ZALO PAY.');
+                        }
+                        $('#Success').modal('show');
+                    },
+                    error: function () {
+                        alert("Bạn không đủ điều kiện để nhận thưởng.")
+                    },
+                });
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            //$('#myModal').modal('show');
+            var ID = $('#ID').val();
+            var PAYMENT = $('#PAYMENT').val();
+            if (ID != "0") {
+                $('#myModal').modal('show');
+            } else {
+                if (PAYMENT == "-1") {
+                    $('#rsgiai').html('BẠN ĐÃ HẾT LƯỢT NHẬN THƯỞNG.');
+                    $('#Success').modal('show');
+                }
+                if (PAYMENT == "-2") {
+                    $('#rsgiai').html('CHƯƠNG TRÌNH ĐÃ HẾT GIẢI THƯỞNG.');
+                    $('#Success').modal('show');
+                }
+                if (PAYMENT == "-9") {
+                    $('#rsgiai').html('BẠN KHÔNG ĐỦ ĐIỀU KIỆN ĐỂ NHẬN THƯỞNG');
+                    $('#Success').modal('show');
+                }
+                
+                
+            }
+        });
+    </script>
+    <script>
+        function ChooseProduct() {
+            $("#Model").html("");
+            $("#Size").html("");
+            var product = $("#Product").val();
+            if (product == "TV") {
+                $("#Model").append(new Option("C825", "C825"));
+                $("#Model").append(new Option("C728", "C728"));
+                $("#Model").append(new Option("C725", "C725"));
+                $("#Model").append(new Option("C726", "C726"));
+                $("#Model").append(new Option("Q726", "Q726"));
+
+                $("#Size").append(new Option("50", "50"));
+                $("#Size").append(new Option("55", "55"));
+                $("#Size").append(new Option("65", "65"));
+                $("#Size").append(new Option("75", "75"));
+
+            } else if (product == "AC") {
+                $("#Model").append(new Option("TPG-11", "TPG-11"));
+
+                $("#Size").append(new Option("1HP", "1HP"));
+                $("#Size").append(new Option("1.5HP", "1.5HP"));
+                $("#Size").append(new Option("2HP", "2HP"));
+                $("#Size").append(new Option("2.5HP", "2.5HP"));
+            }
+            else if (product == "WM") {
+                $("#Model").append(new Option("M03", "M03"));
+
+                $("#Size").append(new Option("8KG", "8KG"));
+                $("#Size").append(new Option("9KG", "9KG"));
+                $("#Size").append(new Option("10KG", "10KG"));
+            }
+        }
+    </script>
+    <script>
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+    </script>
+}

@@ -1,0 +1,39 @@
+2021-04-20 09:53:29.5204 TCL_Voucher.Controllers.HomeController /Uploads/447_chinh-sach.png
+2021-04-20 09:53:29.5990 TCL_Voucher.Controllers.HomeController /Uploads/447_chinh-sach.png;/Uploads/196_gioi-thieu.png
+2021-04-20 09:53:29.6274 TCL_Voucher.Controllers.HomeController /Uploads/447_chinh-sach.png;/Uploads/196_gioi-thieu.png;/Uploads/749_khamphacaoluong.png
+2021-04-20 09:53:35.1470 TCL_Voucher.Controllers.HomeController {"ID":0,"Name":"Thai","Phone":"0965433459","BuyAdr":"test","Province":"An Giang","Product":"Tivi","EMEI":"123456","Model":"test","FileUpload":"/Uploads/447_chinh-sach.png;/Uploads/196_gioi-thieu.png;/Uploads/749_khamphacaoluong.png","Createdate":null}
+2021-04-20 09:55:32.6263 TCL_Voucher.Controllers.HomeController /Uploads/422_chinh-sach.png
+2021-04-20 09:55:32.6263 TCL_Voucher.Controllers.HomeController /Uploads/422_chinh-sach.png;/Uploads/422_gioi-thieu.png
+2021-04-20 09:55:32.6710 TCL_Voucher.Controllers.HomeController /Uploads/422_chinh-sach.png;/Uploads/422_gioi-thieu.png;/Uploads/422_khamphacaoluong.png
+2021-04-20 09:55:36.5847 TCL_Voucher.Controllers.HomeController {"ID":0,"Name":"Thai","Phone":"0965433459","BuyAdr":"test","Province":"An Giang","Product":"Tivi","EMEI":"123456","Model":"test","FileUpload":"/Uploads/422_chinh-sach.png;/Uploads/422_gioi-thieu.png;/Uploads/422_khamphacaoluong.png","Createdate":null}
+2021-04-20 10:37:09.7792 TCL_Voucher.Controllers.HomeController /Uploads/930_chinh-sach.png
+2021-04-20 10:37:10.0909 TCL_Voucher.Controllers.HomeController /Uploads/930_chinh-sach.png;/Uploads/449_gioi-thieu.png
+2021-04-20 10:37:10.0909 TCL_Voucher.Controllers.HomeController /Uploads/930_chinh-sach.png;/Uploads/449_gioi-thieu.png;/Uploads/449_khamphacaoluong.png
+2021-04-20 10:37:10.7679 TCL_Voucher.Controllers.HomeController {"ID":0,"Name":"Thai","Phone":"0965433459","BuyAdr":"test","Province":"An Giang","Product":"Tivi","EMEI":"123456","Model":null,"FileUpload":"/Uploads/930_chinh-sach.png;/Uploads/449_gioi-thieu.png;/Uploads/449_khamphacaoluong.png","Createdate":null}
+2021-04-20 10:37:25.9863 TCL_Voucher.Controllers.HomeController {"ID":0,"Name":"Thai","Phone":"0965433459","BuyAdr":"test","Province":"An Giang","Product":"Tivi","EMEI":"123456","Model":"test","FileUpload":"/Uploads/930_chinh-sach.png;/Uploads/449_gioi-thieu.png;/Uploads/449_khamphacaoluong.png","Createdate":null}
+2021-04-20 10:37:32.0025 TCL_Voucher.Controllers.HomeController {"ID":0,"Name":"Thai","Phone":"0965433459","BuyAdr":"test","Province":"An Giang","Product":"Tivi","EMEI":"1234567","Model":"test","FileUpload":"/Uploads/930_chinh-sach.png;/Uploads/449_gioi-thieu.png;/Uploads/449_khamphacaoluong.png","Createdate":null}
+2021-04-22 14:32:00.5189 TCL_Voucher.Controllers.HomeController /Uploads/586_chinh-sach.png
+2021-04-22 14:32:00.5802 TCL_Voucher.Controllers.HomeController /Uploads/586_chinh-sach.png;/Uploads/499_gioi-thieu.png
+2021-04-22 14:32:00.5823 TCL_Voucher.Controllers.HomeController /Uploads/586_chinh-sach.png;/Uploads/499_gioi-thieu.png;/Uploads/499_khamphacaoluong.png
+2021-04-22 14:32:08.9343 TCL_Voucher.Controllers.HomeController /Uploads/452_707114166.jpg
+2021-04-22 14:32:08.9661 TCL_Voucher.Controllers.HomeController /Uploads/452_707114166.jpg;/Uploads/452_banner.png
+2021-04-22 14:32:08.9661 TCL_Voucher.Controllers.HomeController /Uploads/452_707114166.jpg;/Uploads/452_banner.png;/Uploads/170_chinh-sach.png
+2021-04-22 14:32:08.9661 TCL_Voucher.Controllers.HomeController /Uploads/452_707114166.jpg;/Uploads/452_banner.png;/Uploads/170_chinh-sach.png;/Uploads/170_data.inv
+2021-04-22 14:32:08.9661 TCL_Voucher.Controllers.HomeController /Uploads/452_707114166.jpg;/Uploads/452_banner.png;/Uploads/170_chinh-sach.png;/Uploads/170_data.inv;/Uploads/170_gioi-thieu.png
+2021-04-22 14:32:45.6756 TCL_Voucher.Controllers.HomeController /Uploads/746_707114166.jpg
+2021-04-22 14:32:45.6775 TCL_Voucher.Controllers.HomeController /Uploads/746_707114166.jpg;/Uploads/746_banner.png
+2021-04-22 14:32:45.6775 TCL_Voucher.Controllers.HomeController /Uploads/746_707114166.jpg;/Uploads/746_banner.png;/Uploads/582_bgfooter.png
+2021-04-22 14:32:45.6775 TCL_Voucher.Controllers.HomeController /Uploads/746_707114166.jpg;/Uploads/746_banner.png;/Uploads/582_bgfooter.png;/Uploads/582_chinh-sach.png
+2021-04-22 14:32:45.6775 TCL_Voucher.Controllers.HomeController /Uploads/746_707114166.jpg;/Uploads/746_banner.png;/Uploads/582_bgfooter.png;/Uploads/582_chinh-sach.png;/Uploads/582_data.inv
+2021-04-22 14:32:54.3711 TCL_Voucher.Controllers.HomeController /Uploads/413_chinh-sach.png
+2021-04-22 14:32:54.3711 TCL_Voucher.Controllers.HomeController /Uploads/413_chinh-sach.png;/Uploads/413_data.inv
+2021-04-22 14:32:54.3711 TCL_Voucher.Controllers.HomeController /Uploads/413_chinh-sach.png;/Uploads/413_data.inv;/Uploads/413_gioi-thieu.png
+2021-04-22 14:34:42.0972 TCL_Voucher.Controllers.HomeController /Uploads/546_data.inv
+2021-04-22 14:34:42.0972 TCL_Voucher.Controllers.HomeController /Uploads/546_data.inv;/Uploads/546_favicon.ico
+2021-04-22 14:34:42.0982 TCL_Voucher.Controllers.HomeController /Uploads/546_data.inv;/Uploads/546_favicon.ico;/Uploads/546_gioi-thieu.png
+2021-04-22 14:50:50.3850 TCL_Voucher.Controllers.HomeController /Uploads/887_707114166.jpg
+2021-04-22 14:50:50.7455 TCL_Voucher.Controllers.HomeController /Uploads/887_707114166.jpg;/Uploads/960_banner.png
+2021-04-22 14:50:50.7455 TCL_Voucher.Controllers.HomeController /Uploads/887_707114166.jpg;/Uploads/960_banner.png;/Uploads/960_bgproduct.png
+2021-04-22 14:57:18.4633 TCL_Voucher.Controllers.HomeController /Uploads/182_2.ruou cao luong.jpg
+2021-04-22 14:57:18.4943 TCL_Voucher.Controllers.HomeController /Uploads/182_2.ruou cao luong.jpg;/Uploads/377_favicon.ico
+2021-04-22 14:57:18.4943 TCL_Voucher.Controllers.HomeController /Uploads/182_2.ruou cao luong.jpg;/Uploads/377_favicon.ico;/Uploads/377_linespace.png

@@ -1,0 +1,408 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+    input {
+        max-width: 280px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    select {
+        max-width: 280px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    ul li {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-weight: bold;
+    }
+
+    .tab-content {
+        line-height: 21px;
+    }
+
+        .tab-content table tr:first-child td {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .tab-content table td {
+            text-align: center;
+        }
+
+    @@media(max-width:684px) {
+        ul li {
+            font-size: 13px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+    }
+</style>
+<div class="banner">
+    <img src="~/Content/Image/banner.jpg" class="img-responsive" width="100%" />
+</div>
+
+<div class="container">
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active">
+            <a href="#yorkminster" aria-controls="home" role="tab" data-toggle="tab">
+                <i class="fa fa-bookmark" aria-hidden="true"></i> THỂ LỆ
+            </a>
+        </li>
+        <li role="presentation">
+            <a href="#yorkcastle" aria-controls="profile" role="tab" data-toggle="tab">
+                <i class="fa fa-gift" aria-hidden="true"></i> ĐĂNG KÝ
+            </a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="yorkminster">
+            <br />
+            <h3 class="text-center">THỂ LỆ CHƯƠNG TRÌNH KHUYẾN MẠI</h3>
+            <br />
+            <p>
+                1. Tên chương trình khuyến mại: <strong>"SAN SẺ ĐIỆN NĂNG, XUA TAN NGÀY NẮNG – ĐỢT 2"</strong><br />
+                2. Hàng hóa, dịch vụ khuyến mãi:<br />
+                <table class="table table-bordered">
+                    <tr>
+                        <td>STT</td>
+                        <td>Phân Loại</td>
+                        <td>Model</td>
+                        <td>Size</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>TV</td>
+                        <td>C725, Q726, P725</td>
+                        <td>55", 65", 75"</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td rowspan="2" style="vertical-align:middle">Máy Lạnh</td>
+                        <td rowspan="2" style="vertical-align:middle"> TPG11</td>
+                        <td>1HP</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>1,5HP/ 2HP/ 2,5HP</td>
+                    </tr>
+                </table>
+                3. Thời gian khuyến mãi: 16/05/2021 đến 31/05/2021<br />
+                4. Địa bàn (phạm vi) khuyến mãi: Toàn quốc<br />
+                5. Hình thức khuyến mãi: Khách hàng mua sản phẩm khuyến mãi được hoàn tiền điện<br />
+                6. Khách hàng của chương trình khuyến mãi (đối tượng hưởng khuyến mãi): Khách hàng mua sản phẩm khuyến mãi theo quy định. <br />
+                7. Cơ cấu quà tặng:<br />
+                <table class="table table-bordered">
+                    <tr>
+                        <td>STT</td>
+                        <td>Phân Loại</td>
+                        <td>Nội dung quà tặng</td>
+                        <td>Giá trị quà tặng <br />(VNĐ)</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>C725, Q726, P725</td>
+                        <td>Hoàn tiền điện tử ZaloPay</td>
+                        <td>800,000</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>TPG11 1.0HP</td>
+                        <td>Hoàn tiền điện tử ZaloPay</td>
+                        <td>800,000</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>TPG11 từ 1.5HP</td>
+                        <td>Hoàn tiền điện tử ZaloPay</td>
+                        <td>1,000,000</td>
+                    </tr>
+                </table>
+            </p>
+            <p>
+                <strong>I.	Cách thức tham dự chương trình khuyến mãi:</strong><br />
+                -	Khách hàng sau khi mua sản phẩm khuyến mãi theo quy định tham gia chương trình bằng 2 cách:<br />
+                <strong>Cách 1: </strong>Khách hàng cài đặt ứng dụng TCL HOME từ kho ứng dụng điện thoại, sau khi cài đặt hoàn thành, khách hàng tạo tài khoản TCL HOME, vào mục chương trình khuyến mãi điền các thông tin như : Họ tên, số điện thoại, tỉnh/ thành, nơi mua sản phẩm, số IMEI, chụp hình hoá đơn. Sau khi cập nhật thông tin thành công, hệ thống sẽ thông báo cho khách hàng thời gian và cách  thức nhận quà.<br />
+                <strong>Cách 2: </strong>Khách hàng truy cập trang http://sansetiendien.tcl.com hoặc quét mã QR Code và điền thông tin như : Họ tên, số điện thoại, tỉnh/ thành, nơi mua sản phẩm, số IMEI, chụp hình hoá đơn. Sau khi cập nhật thông tin thành công, hệ thống sẽ thông báo cho khách hàng thời gian và cách thức nhận quà.<br />
+
+            </p>
+            <p>
+                <strong>II.	Quy định về thời gian, cách thức và thủ tục nhận giải:</strong><br />
+                -	Sau khi kiểm tra thông tin khách hàng cung cấp, trong vòng 7 ngày làm việc, TCL sẽ chuyển tiền điện trực tiếp qua ứng dụng ZaloPay cho khách hàng thông qua số điện thoại đã cung cấp.<br />
+                -	Để nhận quà khuyến mãi, khách hàng phải có ví ZaloPay. Trường hợp khách hàng chưa có ví điện tử ZaloPay, khách hàng vui lòng tải ứng dụng & đăng ký trong vòng 3 ngày sau khi cung cấp thông tin nhận quà trên website hoặc ứng dụng TCL HOME. <br />
+                -	Thời gian cuối cùng Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) trao quà cho khách hàng là 17 giờ ngày 15/06/2021<br />
+            </p>
+            <p>
+                <strong>III.	Các quy định khác:</strong><br />
+                -	Trong trường hợp xảy ra tranh chấp liên quan đến chương trình khuyến mãi này, Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) có trách nhiệm trực tiếp giải quyết. Trong trường hợp không thể thoả thuận, tranh chấp sẽ được xử lý theo quy định của pháp luật hiện hành.<br />
+                -   1 khách hàng tối đa được đăng ký 2 lần, tương tự nhận được 2 phần quà.<br />
+                -   Số lượng quà có hạn, chương trình có thể kết thúc sớm hơn dự kiến.<br />
+                -	Để được giải đáp các thắc mắc liên quan đến chương trình khuyến mãi, khách hàng liên hệ bộ phận GTM của Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) theo số 028 3836 6111 (nhánh: 498) hoặc Hotline 1800 588 880 để được hướng dẫn, giải đáp.<br />
+            </p>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="yorkcastle">
+            <div class="text-center">
+                <h3>ĐĂNG KÝ THÔNG TIN</h3>
+                <p class="text-danger">(Thông tin đăng ký chương trình phải đúng với thông tin mua hàng trên hoá đơn.)</p>
+                <hr />
+                <form>
+                    <input class="form-control" type="text" id="Name" name="Name" required placeholder="Họ và tên ..." />
+                    <input class="form-control" type="number" id="Phone" name="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="Số điện thoại ..." />
+                    <input class="form-control" type="text" id="BuyAdr" name="BuyAdr" required placeholder="Nơi mua hàng ..." />
+                    <select class="form-control" id="Province" name="Province" required>
+                        <option value="">--Thành phố--</option>
+                        <option value="An Giang">An Giang</option>
+                        <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
+                        <option value="Bắc Giang">Bắc Giang</option>
+                        <option value="Bắc Kạn">Bắc Kạn</option>
+                        <option value="Bạc Liêu">Bạc Liêu</option>
+                        <option value="Bắc Ninh">Bắc Ninh</option>
+                        <option value="Bến Tre">Bến Tre</option>
+                        <option value="Bình Định">Bình Định</option>
+                        <option value="Bình Dương">Bình Dương</option>
+                        <option value="Bình Phước">Bình Phước</option>
+                        <option value="Bình Thuận">Bình Thuận</option>
+                        <option value="Cà Mau">Cà Mau</option>
+                        <option value="Cần Thơ">Cần Thơ</option>
+                        <option value="Cao Bằng">Cao Bằng</option>
+                        <option value="Đà Nẵng">Đà Nẵng</option>
+                        <option value="Đắk Lắk">Đắk Lắk</option>
+                        <option value="Đắk Nông">Đắk Nông</option>
+                        <option value="Điện Biên">Điện Biên</option>
+                        <option value="Đồng Nai">Đồng Nai</option>
+                        <option value="Đồng Tháp">Đồng Tháp</option>
+                        <option value="Gia Lai">Gia Lai</option>
+                        <option value="Hà Giang">Hà Giang</option>
+                        <option value="Hà Nam">Hà Nam</option>
+                        <option value="Hà Nội">Hà Nội</option>
+                        <option value="Hà Tĩnh">Hà Tĩnh</option>
+                        <option value="Hải Dương">Hải Dương</option>
+                        <option value="Hải Phòng">Hải Phòng</option>
+                        <option value="Hậu Giang">Hậu Giang</option>
+                        <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                        <option value="Hòa Bình">Hòa Bình</option>
+                        <option value="Hưng Yên">Hưng Yên</option>
+                        <option value="Khánh Hòa">Khánh Hòa</option>
+                        <option value="Kiên Giang">Kiên Giang</option>
+                        <option value="Kon Tum">Kon Tum</option>
+                        <option value="Lai Châu">Lai Châu</option>
+                        <option value="Lâm Đồng">Lâm Đồng</option>
+                        <option value="Lạng Sơn">Lạng Sơn</option>
+                        <option value="Lào Cai">Lào Cai</option>
+                        <option value="Long An">Long An</option>
+                        <option value="Nam Định">Nam Định</option>
+                        <option value="Nghệ An">Nghệ An</option>
+                        <option value="Ninh Bình">Ninh Bình</option>
+                        <option value="Ninh Thuận">Ninh Thuận</option>
+                        <option value="Phú Thọ">Phú Thọ</option>
+                        <option value="Phú Yên">Phú Yên</option>
+                        <option value="Quảng Bình">Quảng Bình</option>
+                        <option value="Quảng Nam">Quảng Nam</option>
+                        <option value="Quảng Ngãi">Quảng Ngãi</option>
+                        <option value="Quảng Ninh">Quảng Ninh</option>
+                        <option value="Quảng Trị">Quảng Trị</option>
+                        <option value="Sóc Trăng">Sóc Trăng</option>
+                        <option value="Sơn La">Sơn La</option>
+                        <option value="Tây Ninh">Tây Ninh</option>
+                        <option value="Thái Bình">Thái Bình</option>
+                        <option value="Thái Nguyên">Thái Nguyên</option>
+                        <option value="Thanh Hóa">Thanh Hóa</option>
+                        <option value="Thừa Thiên Huế">Thừa Thiên Huế</option>
+                        <option value="Tiền Giang">Tiền Giang</option>
+                        <option value="Trà Vinh">Trà Vinh</option>
+                        <option value="Tuyên Quang">Tuyên Quang</option>
+                        <option value="Vĩnh Long">Vĩnh Long</option>
+                        <option value="Vĩnh Phúc">Vĩnh Phúc</option>
+                        <option value="Yên Bái">Yên Bái</option>
+                    </select>
+                    @Html.DropDownList("Product", new List<SelectListItem>{
+                        new SelectListItem() {Text = "--Sản phẩm--", Value=""},
+                        new SelectListItem() {Text = "Tivi", Value="Tivi"},
+                        new SelectListItem() {Text = "Máy lạnh", Value="Máy lạnh"},
+               },
+                        new { @class = "form-control", onchange = "ChooseProduct()" })
+                    <input class="form-control" id="Emei" name="Emei" required placeholder="Số EMEI ..." />
+                    <select class="form-control" id="Model" name="Model" required placeholder="Model ..." >
+                        <option>Chọn Model</option>
+                    </select>
+                    <input class="form-control" type="file" id="Invoice" required name="Invoice" placeholder="Hình ảnh hóa đơn ..." style="margin-bottom:0;" multiple />
+                    <input class="form-control hidden" type="text" id="Image" required name="Image" />
+                    <p style="font-size:11px;color:sandybrown;font-style:italic;">Tải lên hình ảnh hóa đơn mua sản phẩm, Mặt trước CMND/CCCC, Hình ảnh Số serial.</p>
+
+                    <div class="text-center">
+                        <button id="btnSend" type="button" class="btn btn-info"><i class="fa fa-check" aria-hidden="true"></i> GỬI THÔNG TIN</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title text-center text-danger">THÔNG BÁO</h3>
+            </div>
+            <div class="modal-body">
+                <p class="text-center">
+                    <span class="text-success">Chúc mừng quý khách đã tham gia chương trinh, Sau khi Kiểm tra thông tin, trong vòng 7 ngày làm việc, TCL sẽ chuyển trực tiếp phí hỗ trợ tiền điện qua ví ZaloPay. </span><br />
+                </p>
+                <p class="text-justify">
+                    Khách hàng chưa có ứng dụng ZaloPay hoặc chưa xác thực tài khoản, vui lòng tải ứng dụng và xác thực tài khoản để nhận thưởng trong vòng 3 ngày sau khi tham gia chương trình. Tham khảo hướng dẫn xác thực tài khoản: https://cutt.ly/ZbRG4bn
+                    Chi tiết liên hệ 028 3836 6111 (nhánh: 498) hoặc Hotline 1800 588 880.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        function ChooseProduct() {
+            $("#Model").html("");
+            var product = $("#Product").val();
+            if (product == "Tivi") {
+                $("#Model").append(new Option("55C725", "55C725"));
+                $("#Model").append(new Option("65C725", "65C725"));
+                $("#Model").append(new Option("75C725", "75C725"));
+                $("#Model").append(new Option("55Q726", "55Q726"));
+                $("#Model").append(new Option("65Q726", "65Q726"));
+                $("#Model").append(new Option("55P725", "55P725"));
+                $("#Model").append(new Option("65P725", "65P725"));
+                $("#Model").append(new Option("75P725", "75P725"));
+
+            } else if (product == "Máy lạnh") {
+                $("#Model").append(new Option("TPG11 - 1.0HP", "TPG11 - 1.0HP"));
+                $("#Model").append(new Option("TPG11 - 1.5HP", "TPG11 - 1.5HP"));
+                $("#Model").append(new Option("TPG11 - 2.0HP", "TPG11 - 2.0HP"));
+            }
+            //if (product == "Tivi") {
+            //    $("#spanId").text("800.000");
+            //} else if (product == "Máy lạnh TPG11 1.0HP") {
+            //    $("#spanId").text("800.000");
+            //}
+            //else if (product == "Máy lạnh TPG11 từ 1.5HP") {
+            //    $("#spanId").text("1.000.000");
+            //}
+        }
+        $("#Invoice").change(function () {
+            var $fileUpload = $("input[type='file']");
+            if (parseInt($fileUpload.get(0).files.length) != 3) {
+                alert("Tải lên hình ảnh hóa đơn mua sản phẩm, Mặt trước CMND/CCCC, Hình ảnh Số serial");
+            }
+            else {
+                if (window.FormData !== undefined) {
+
+                    var fileUpload = $("#Invoice").get(0);
+                    var files = fileUpload.files;
+                    var fileData = new FormData();
+                    for (var i = 0; i < files.length; i++) {
+                        fileData.append(files[i].name, files[i]);
+                    }
+                    $.ajax({
+                        url: '/Home/UploadImage',
+                        type: "POST",
+                        contentType: false,
+                        processData: false,
+                        data: fileData,
+                        success: function (result) {
+                            $("#Image").val(result);
+                        },
+                        error: function (err) {
+                            alert(err.statusText);
+                        }
+                    });
+                } else {
+                    alert("FormData is not supported in the browser.");
+                }
+            }
+
+
+        });
+        $("#btnSend").click(function () {
+            $('#btnSend').prop('disabled', true);
+
+            var name = $("#Name").val();
+            var phone = $("#Phone").val();
+            var buyadr = $("#BuyAdr").val();
+            var province = $("#Province").val();
+            var product = $("#Product").val();
+            var emei = $("#Emei").val();
+            var model = $("#Model").val();
+            var image = $("#Image").val();
+            if (name.length > 0 &&
+                phone.length == 10 &&
+                province.length > 0 &&
+                emei.length > 0 &&
+                image.length > 0 &&
+                product.length > 0 &&
+                buyadr.length > 0) {
+
+                $.ajax({
+                    type: "POST",
+                    url: "/Home/SendContact",
+                    data: JSON.stringify({
+                        Name: name,
+                        Phone: phone,
+                        BuyAdr: buyadr,
+                        Province: province,
+                        Product: product,
+                        EMEI: emei,
+                        Model: model,
+                        FileUpload: image
+                    }),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "html",
+                    success: function (response) {
+                        if (response == 1) {
+                            $('#myModal').modal('show');
+                            $("#Name").val("");
+                            $("#Phone").val("");
+                            $("#BuyAdr").val("");
+                            $("#Province").val("");
+                            $("#Product").val("");
+                            $("#Emei").val("");
+                            $("#Model").val("");
+                            $("#Image").val("");
+                            $("#Invoice").val("");
+                        } else {
+                            alert(response);
+                        }
+
+                        $('#btnSend').prop('disabled', false);
+                    },
+                    failure: function (response) {
+                        alert(response.responseText);
+                        $('#btnSend').prop('disabled', false);
+                    },
+                    error: function (response) {
+                        alert(response.responseText);
+                        $('#btnSend').prop('disabled', false);
+                    }
+                });
+
+            } else {
+                alert("Thông tin chưa đủ hoặc sai. Để nhận được quà chương trình quý khách vui lòng nhập đầy đủ thông tin bên trên. ");
+                $('#btnSend').prop('disabled', false);
+            }
+        });
+    </script>
+}

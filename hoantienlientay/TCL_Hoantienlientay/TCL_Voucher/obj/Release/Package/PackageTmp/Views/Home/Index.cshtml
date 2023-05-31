@@ -1,0 +1,622 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+    input {
+        max-width: 400px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    select {
+        max-width: 400px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    ul li {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-weight: bold;
+    }
+
+    .tab-content {
+        line-height: 21px;
+    }
+
+    ul li .fa {
+        font-size: larger;
+    }
+
+    .tab-content table tr:first-child td {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .box {
+        max-width: 400px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+        .box p {
+            padding-left: 0;
+            padding-right: 0;
+            text-align: left;
+        }
+
+    @@media(max-width:684px) {
+        ul li {
+            font-size: 13px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+    }
+
+    #yorkminster p {
+        text-align: justify;
+    }
+</style>
+<div class="banner">
+    <img src="~/Content/Image/banner.png" class="img-responsive" width="100%" />
+</div>
+
+<div class="container">
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        @if (ViewBag.msg != null)
+        {
+            <li role="presentation">
+                <a href="#yorkminster" aria-controls="home" role="tab" data-toggle="tab">
+                    <i class="fa fa-bookmark" aria-hidden="true"></i> THỂ LỆ
+                </a>
+            </li>
+            <li role="presentation" class="active">
+                <a href="#yorkcastle" aria-controls="profile" role="tab" data-toggle="tab">
+                    <i class="fa fa-gift" aria-hidden="true"></i> ĐĂNG KÝ
+                </a>
+            </li>
+        }
+        else
+        {
+            <li role="presentation" class="active">
+                <a href="#yorkminster" aria-controls="home" role="tab" data-toggle="tab">
+                    <i class="fa fa-bookmark" aria-hidden="true"></i> THỂ LỆ
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#yorkcastle" aria-controls="profile" role="tab" data-toggle="tab">
+                    <i class="fa fa-gift" aria-hidden="true"></i> ĐĂNG KÝ
+                </a>
+            </li>
+        }
+
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        @if (ViewBag.msg != null)
+        {
+            <div role="tabpanel" class="tab-pane" id="yorkminster">
+                <br />
+                <h3 class="text-center">THỂ LỆ CHƯƠNG TRÌNH KHUYẾN MẠI</h3>
+                <br />
+                <p>1. Tên chương trình khuyến mại: <b>"HOÀN TIỀN THẢ GA, ĐÓN OLYMPIC TẠI NHÀ"</b></p>
+                <p>2. Hàng hóa, dịch vụ khuyến mại: </p>
+                <div>
+                    <table class="table table-bordered">
+                        <tr>
+                            <td>STT</td>
+                            <td>Phân Loại</td>
+                            <td>Model</td>
+                            <td>Size</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>TV</td>
+                            <td>C825, C725, Q726, P725, P615/P618</td>
+                            <td>50”, 55”, 65”, 75”</td>
+                        </tr>
+                    </table>
+                </div>
+                <p>3. Thời gian khuyến mại: 26/07/2021 đến 08/08/2021</p>
+                <p>4. Địa bàn (phạm vi) khuyến mại: Các kênh siêu thị điện máy Chợ Lớn, DMX, Nguyễn Kim, Pico, Media Mart và VHC</p>
+                <p>5. Hình thức khuyến mại: Khách hàng mua sản phẩm TV TCL theo danh sách áp dụng, được hoàn tiền điện trực tiếp qua ZaloPay</p>
+                <p>6. Khách hàng của chương trình khuyến mãi (đối tượng hưởng khuyến mãi): Khách hàng mua sản phẩm khuyến mãi theo quy định.</p>
+                <p>7. Cơ cấu quà tặng:</p>
+                <table class="table table-bordered">
+                    <tr>
+                        <td>STT</td>
+                        <td>Phân Loại</td>
+                        <td>Nội dung quà tặng</td>
+                        <td>Giá trị quà tặng<br />(VNĐ)</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>TV 50", 55"</td>
+                        <td>Hoàn tiền điện tử ZaloPay</td>
+                        <td>500,000</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>TV 65", 75"</td>
+                        <td>Hoàn tiền điện tử ZaloPay</td>
+                        <td>800,000</td>
+                    </tr>
+                </table>
+                <p><b>I. Cách thức tham dự chương trình khuyến mãi:</b></p>
+                <p>-	Khách hàng sau khi mua sản phẩm khuyến mãi theo quy định tham gia chương trình bằng cách:</p>
+                <p>•	Khách hàng truy cập trang <a href="http://sansetiendien.tcl.com">http://sansetiendien.tcl.com</a> hoặc quét mã QR Code và điền thông tin như : Họ tên, số điện thoại, tỉnh/ thành, nơi mua sản phẩm, tên model, kích thước sản phẩm và chụp hình hoá đơn. Sau khi cập nhật thông tin thành công, hệ thống sẽ thông báo cho khách hàng thời gian và cách thức nhận quà.</p>
+                <p><b>Lưu ý:</b> Thông tin đăng ký chương trình phải phải đúng với thông tin mua hàng trên hoá đơn. Trường hợp Nhân viên TCL hoặc cửa hàng đăng ký giúp khách hàng, phải sử dụng số điện thoại và tên của Khách hàng để đăng ký, không được dùng tên hoặc điện thoại của mình để đăng ký.</p>
+                <p><b>II. Quy định về thời gian, cách thức và thủ tục nhận giải:</b></p>
+                <p>-	Thời hạn trang <a href="http://sansetiendien.tcl.com">http://sansetiendien.tcl.com</a> mở để nhận thông tin đăng ký và kết thúc trả mã dự thưởng kèm kết quả trúng thưởng cho khách hàng từ 0h00 ngày 26/07/2021 đến 23h59 ngày 10/08/2021</p>
+                <p>- Khách hàng tham gia chương trình, cần tạo tài khoản thanh toán điện tử Zalo Pay. Và đã tiến hành định danh xác thực tài khoản. Trường hợp tài khoản chưa định danh, tài khoản khách hàng không đủ điều kiện để nhận thưởng.</p>
+                <p>- Hướng dẫn định danh tài khoản ZaloPay: Người tiêu dùng tải và đăng nhập ZaloPay > Chọn Cá nhân > Chọn Thông tin cá nhân > Chọn Định danh tài khoản hoặc truy cập vào link sau để được hướng dẫn chi tiết <a href="http://sbsupport.zalopay.vn/support/solutions/articles/43000489506-c%C3%A1ch-%C4%91%E1%BB%8Bnh-danh-t%C3%A0i-kho%E1%BA%A3n-zalopay">https://cutt.ly/ZbRG4bn</a>. </p>
+                <p>- Thời gian cuối cùng Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) trao quà cho khách hàng là 17 giờ ngày 20/08/2021.</p>
+                <p><b>III. Các quy định khác:</b></p>
+                <p>
+                    -	Trong trường hợp xảy ra tranh chấp liên quan đến chương trình khuyến mãi này, Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) có trách nhiệm trực tiếp giải quyết. Trong trường hợp không thể thoả thuận, tranh chấp sẽ được xử lý theo quy định của pháp luật hiện hành.<br />
+                    -	1 khách hàng tối đa được đăng ký 2 lần, tương tự nhận được 2 phần quà.<br />
+                    -	Để được giải đáp các thắc mắc liên quan đến chương trình khuyến mãi, khách hàng liên hệ bộ phận GTM của Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) theo tài khoản Zalo: KNGAN TCLVN (091.461.0839) hoặc hộp thư ngan.langngockim@tclvn.com.vn.
+                </p>
+
+
+            </div>
+            <div role="tabpanel" class="tab-pane active" id="yorkcastle">
+                <div class="text-center">
+                    <h3>ĐĂNG KÝ THÔNG TIN</h3>
+                    <p class="text-danger">(Thông tin đăng ký phải trùng khớp với thông tin trên hoá đơn mua hàng)</p>
+                    <hr />
+                    <form method="post" action="/Home/Send" enctype="multipart/form-data" id="formpost">
+                        <input class="form-control" type="text" id="Name" name="Name" required placeholder="Họ và tên ..." />
+                        <input class="form-control" type="number" id="Phone" name="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="Số điện thoại ..." />
+
+                        <select class="form-control" id="BuyAdr" name="BuyAdr" required>
+                            <option value="">--Nơi mua hàng--</option>
+                            <option value="Điện máy Chợ Lớn">Điện máy Chợ Lớn</option>
+                            <option value="Điện máy xanh">Điện máy xanh</option>
+                            <option value="Điện máy Nguyễn Kim">Điện máy Nguyễn Kim</option>
+                            <option value="Điện máy Pico">Điện máy Pico</option>
+                            <option value="Điện máy HC">Điện máy HC</option>
+                            <option value="Điện máy Media Mart">Điện máy Media Mart</option>
+                        </select>
+                        <select class="form-control" id="Province" name="Province" required>
+                            <option value="">--Tỉnh/ Thành phố sinh sống--</option>
+                            <option value="An Giang">An Giang</option>
+                            <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
+                            <option value="Bắc Giang">Bắc Giang</option>
+                            <option value="Bắc Kạn">Bắc Kạn</option>
+                            <option value="Bạc Liêu">Bạc Liêu</option>
+                            <option value="Bắc Ninh">Bắc Ninh</option>
+                            <option value="Bến Tre">Bến Tre</option>
+                            <option value="Bình Định">Bình Định</option>
+                            <option value="Bình Dương">Bình Dương</option>
+                            <option value="Bình Phước">Bình Phước</option>
+                            <option value="Bình Thuận">Bình Thuận</option>
+                            <option value="Cà Mau">Cà Mau</option>
+                            <option value="Cần Thơ">Cần Thơ</option>
+                            <option value="Cao Bằng">Cao Bằng</option>
+                            <option value="Đà Nẵng">Đà Nẵng</option>
+                            <option value="Đắk Lắk">Đắk Lắk</option>
+                            <option value="Đắk Nông">Đắk Nông</option>
+                            <option value="Điện Biên">Điện Biên</option>
+                            <option value="Đồng Nai">Đồng Nai</option>
+                            <option value="Đồng Tháp">Đồng Tháp</option>
+                            <option value="Gia Lai">Gia Lai</option>
+                            <option value="Hà Giang">Hà Giang</option>
+                            <option value="Hà Nam">Hà Nam</option>
+                            <option value="Hà Nội">Hà Nội</option>
+                            <option value="Hà Tĩnh">Hà Tĩnh</option>
+                            <option value="Hải Dương">Hải Dương</option>
+                            <option value="Hải Phòng">Hải Phòng</option>
+                            <option value="Hậu Giang">Hậu Giang</option>
+                            <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                            <option value="Hòa Bình">Hòa Bình</option>
+                            <option value="Hưng Yên">Hưng Yên</option>
+                            <option value="Khánh Hòa">Khánh Hòa</option>
+                            <option value="Kiên Giang">Kiên Giang</option>
+                            <option value="Kon Tum">Kon Tum</option>
+                            <option value="Lai Châu">Lai Châu</option>
+                            <option value="Lâm Đồng">Lâm Đồng</option>
+                            <option value="Lạng Sơn">Lạng Sơn</option>
+                            <option value="Lào Cai">Lào Cai</option>
+                            <option value="Long An">Long An</option>
+                            <option value="Nam Định">Nam Định</option>
+                            <option value="Nghệ An">Nghệ An</option>
+                            <option value="Ninh Bình">Ninh Bình</option>
+                            <option value="Ninh Thuận">Ninh Thuận</option>
+                            <option value="Phú Thọ">Phú Thọ</option>
+                            <option value="Phú Yên">Phú Yên</option>
+                            <option value="Quảng Bình">Quảng Bình</option>
+                            <option value="Quảng Nam">Quảng Nam</option>
+                            <option value="Quảng Ngãi">Quảng Ngãi</option>
+                            <option value="Quảng Ninh">Quảng Ninh</option>
+                            <option value="Quảng Trị">Quảng Trị</option>
+                            <option value="Sóc Trăng">Sóc Trăng</option>
+                            <option value="Sơn La">Sơn La</option>
+                            <option value="Tây Ninh">Tây Ninh</option>
+                            <option value="Thái Bình">Thái Bình</option>
+                            <option value="Thái Nguyên">Thái Nguyên</option>
+                            <option value="Thanh Hóa">Thanh Hóa</option>
+                            <option value="Thừa Thiên Huế">Thừa Thiên Huế</option>
+                            <option value="Tiền Giang">Tiền Giang</option>
+                            <option value="Trà Vinh">Trà Vinh</option>
+                            <option value="Tuyên Quang">Tuyên Quang</option>
+                            <option value="Vĩnh Long">Vĩnh Long</option>
+                            <option value="Vĩnh Phúc">Vĩnh Phúc</option>
+                            <option value="Yên Bái">Yên Bái</option>
+                        </select>
+
+                        <input class="form-control hidden" type="text" id="Product" name="Product" required placeholder="Model" value="Tivi" />
+                        @*<input class="form-control" type="text" id="Serial" name="Serial" required placeholder="Serial" />*@
+                        <select class="form-control" id="Model" name="Model" required>
+                            <option value="">--Chọn Model--</option>
+                            <option value=" C825"> C825</option>
+                            <option value="C725">C725</option>
+                            <option value=" Q726"> Q726</option>
+                            <option value="P725">P725</option>
+                            <option value=" P615/P618"> P615/P618</option>
+                        </select>
+                        <select class="form-control" id="Extra" name="Extra" required>
+                            <option value="">--Chọn kích thước--</option>
+                            <option value="50">TV 50"</option>
+                            <option value="55">TV 55"</option>
+                            <option value="65">TV 65"</option>
+                            <option value="75">TV 75"</option>
+                        </select>
+
+                        <div class="box">
+                            <p class="col-xs-3">Hóa đơn: </p>
+                            <div class="col-xs-9">
+                                <input type="file" id="Invoice" name="Invoice" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="text-center box">
+                                <button type="submit" class="btn btn-info" id="btnsubmit"><i class="fa fa-check" aria-hidden="true"></i> GỬI THÔNG TIN</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+
+        }
+        else
+        {
+            <div role="tabpanel" class="tab-pane active" id="yorkminster">
+                <br />
+                <h3 class="text-center">THỂ LỆ CHƯƠNG TRÌNH KHUYẾN MẠI</h3>
+                <br />
+                <p>1. Tên chương trình khuyến mại: <b>"HOÀN TIỀN THẢ GA, ĐÓN OLYMPIC TẠI NHÀ"</b></p>
+                <p>2. Hàng hóa, dịch vụ khuyến mại: </p>
+                <div>
+                    <table class="table table-bordered">
+                        <tr>
+                            <td>STT</td>
+                            <td>Phân Loại</td>
+                            <td>Model</td>
+                            <td>Size</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>TV</td>
+                            <td>C825, C725, Q726, P725, P615/P618</td>
+                            <td>50”, 55”, 65”, 75”</td>
+                        </tr>
+                    </table>
+                </div>
+                <p>3. Thời gian khuyến mại: 26/07/2021 đến 08/08/2021</p>
+                <p>4. Địa bàn (phạm vi) khuyến mại: Các kênh siêu thị điện máy Chợ Lớn, DMX, Nguyễn Kim, Pico, Media Mart và VHC</p>
+                <p>5. Hình thức khuyến mại: Khách hàng mua sản phẩm TV TCL theo danh sách áp dụng, được hoàn tiền điện trực tiếp qua ZaloPay</p>
+                <p>6. Khách hàng của chương trình khuyến mãi (đối tượng hưởng khuyến mãi): Khách hàng mua sản phẩm khuyến mãi theo quy định.</p>
+                <p>7. Cơ cấu quà tặng:</p>
+                <table class="table table-bordered">
+                    <tr>
+                        <td>STT</td>
+                        <td>Phân Loại</td>
+                        <td>Nội dung quà tặng</td>
+                        <td>Giá trị quà tặng<br />(VNĐ)</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>TV 50", 55"</td>
+                        <td>Hoàn tiền điện tử ZaloPay</td>
+                        <td>500,000</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>TV 65", 75"</td>
+                        <td>Hoàn tiền điện tử ZaloPay</td>
+                        <td>800,000</td>
+                    </tr>
+                </table>
+                <p><b>I. Cách thức tham dự chương trình khuyến mãi:</b></p>
+                <p>-	Khách hàng sau khi mua sản phẩm khuyến mãi theo quy định tham gia chương trình bằng cách:</p>
+                <p>•	Khách hàng truy cập trang <a href="http://sansetiendien.tcl.com">http://sansetiendien.tcl.com</a> hoặc quét mã QR Code và điền thông tin như : Họ tên, số điện thoại, tỉnh/ thành, nơi mua sản phẩm, tên model, kích thước sản phẩm và chụp hình hoá đơn. Sau khi cập nhật thông tin thành công, hệ thống sẽ thông báo cho khách hàng thời gian và cách thức nhận quà.</p>
+                <p><b>Lưu ý:</b> Thông tin đăng ký chương trình phải phải đúng với thông tin mua hàng trên hoá đơn. Trường hợp Nhân viên TCL hoặc cửa hàng đăng ký giúp khách hàng, phải sử dụng số điện thoại và tên của Khách hàng để đăng ký, không được dùng tên hoặc điện thoại của mình để đăng ký.</p>
+                <p><b>II. Quy định về thời gian, cách thức và thủ tục nhận giải:</b></p>
+                <p>-	Thời hạn trang <a href="http://sansetiendien.tcl.com">http://sansetiendien.tcl.com</a> mở để nhận thông tin đăng ký và kết thúc trả mã dự thưởng kèm kết quả trúng thưởng cho khách hàng từ 0h00 ngày 26/07/2021 đến 23h59 ngày 10/08/2021</p>
+                <p>- Khách hàng tham gia chương trình, cần tạo tài khoản thanh toán điện tử Zalo Pay. Và đã tiến hành định danh xác thực tài khoản. Trường hợp tài khoản chưa định danh, tài khoản khách hàng không đủ điều kiện để nhận thưởng.</p>
+                <p>- Hướng dẫn định danh tài khoản ZaloPay: Người tiêu dùng tải và đăng nhập ZaloPay > Chọn Cá nhân > Chọn Thông tin cá nhân > Chọn Định danh tài khoản hoặc truy cập vào link sau để được hướng dẫn chi tiết <a href="http://sbsupport.zalopay.vn/support/solutions/articles/43000489506-c%C3%A1ch-%C4%91%E1%BB%8Bnh-danh-t%C3%A0i-kho%E1%BA%A3n-zalopay">https://cutt.ly/ZbRG4bn</a>. </p>
+                <p>- Thời gian cuối cùng Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) trao quà cho khách hàng là 17 giờ ngày 20/08/2021.</p>
+                <p><b>III. Các quy định khác:</b></p>
+                <p>
+                    -	Trong trường hợp xảy ra tranh chấp liên quan đến chương trình khuyến mãi này, Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) có trách nhiệm trực tiếp giải quyết. Trong trường hợp không thể thoả thuận, tranh chấp sẽ được xử lý theo quy định của pháp luật hiện hành.<br />
+                    -	1 khách hàng tối đa được đăng ký 2 lần, tương tự nhận được 2 phần quà.<br />
+                    -	Để được giải đáp các thắc mắc liên quan đến chương trình khuyến mãi, khách hàng liên hệ bộ phận GTM của Công ty TNHH Điện Tử Thông Minh TCL (Việt Nam) theo tài khoản Zalo: KNGAN TCLVN (091.461.0839) hoặc hộp thư ngan.langngockim@tclvn.com.vn.
+                </p>
+
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="yorkcastle">
+                <div class="text-center">
+                    <h3>ĐĂNG KÝ THÔNG TIN</h3>
+                    <p class="text-danger">(Thông tin đăng ký phải trùng khớp với thông tin trên hoá đơn mua hàng)</p>
+                    <hr />
+                    <form method="post" action="/Home/Send" enctype="multipart/form-data" id="formpost">
+                        <input class="form-control" type="text" id="Name" name="Name" required placeholder="Họ và tên ..." />
+                        <input class="form-control" type="number" id="Phone" name="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="Số điện thoại ..." />
+
+                        <select class="form-control" id="BuyAdr" name="BuyAdr" required>
+                            <option value="">--Nơi mua hàng--</option>
+                            <option value="Điện máy Chợ Lớn">Điện máy Chợ Lớn</option>
+                            <option value="Điện máy xanh">Điện máy xanh</option>
+                            <option value="Điện máy Nguyễn Kim">Điện máy Nguyễn Kim</option>
+                            <option value="Điện máy Pico">Điện máy Pico</option>
+                            <option value="Điện máy HC">Điện máy HC</option>
+                            <option value="Điện máy Media Mart">Điện máy Media Mart</option>
+                        </select>
+                        <select class="form-control" id="Province" name="Province" required>
+                            <option value="">--Tỉnh/ Thành phố sinh sống--</option>
+                            <option value="An Giang">An Giang</option>
+                            <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
+                            <option value="Bắc Giang">Bắc Giang</option>
+                            <option value="Bắc Kạn">Bắc Kạn</option>
+                            <option value="Bạc Liêu">Bạc Liêu</option>
+                            <option value="Bắc Ninh">Bắc Ninh</option>
+                            <option value="Bến Tre">Bến Tre</option>
+                            <option value="Bình Định">Bình Định</option>
+                            <option value="Bình Dương">Bình Dương</option>
+                            <option value="Bình Phước">Bình Phước</option>
+                            <option value="Bình Thuận">Bình Thuận</option>
+                            <option value="Cà Mau">Cà Mau</option>
+                            <option value="Cần Thơ">Cần Thơ</option>
+                            <option value="Cao Bằng">Cao Bằng</option>
+                            <option value="Đà Nẵng">Đà Nẵng</option>
+                            <option value="Đắk Lắk">Đắk Lắk</option>
+                            <option value="Đắk Nông">Đắk Nông</option>
+                            <option value="Điện Biên">Điện Biên</option>
+                            <option value="Đồng Nai">Đồng Nai</option>
+                            <option value="Đồng Tháp">Đồng Tháp</option>
+                            <option value="Gia Lai">Gia Lai</option>
+                            <option value="Hà Giang">Hà Giang</option>
+                            <option value="Hà Nam">Hà Nam</option>
+                            <option value="Hà Nội">Hà Nội</option>
+                            <option value="Hà Tĩnh">Hà Tĩnh</option>
+                            <option value="Hải Dương">Hải Dương</option>
+                            <option value="Hải Phòng">Hải Phòng</option>
+                            <option value="Hậu Giang">Hậu Giang</option>
+                            <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                            <option value="Hòa Bình">Hòa Bình</option>
+                            <option value="Hưng Yên">Hưng Yên</option>
+                            <option value="Khánh Hòa">Khánh Hòa</option>
+                            <option value="Kiên Giang">Kiên Giang</option>
+                            <option value="Kon Tum">Kon Tum</option>
+                            <option value="Lai Châu">Lai Châu</option>
+                            <option value="Lâm Đồng">Lâm Đồng</option>
+                            <option value="Lạng Sơn">Lạng Sơn</option>
+                            <option value="Lào Cai">Lào Cai</option>
+                            <option value="Long An">Long An</option>
+                            <option value="Nam Định">Nam Định</option>
+                            <option value="Nghệ An">Nghệ An</option>
+                            <option value="Ninh Bình">Ninh Bình</option>
+                            <option value="Ninh Thuận">Ninh Thuận</option>
+                            <option value="Phú Thọ">Phú Thọ</option>
+                            <option value="Phú Yên">Phú Yên</option>
+                            <option value="Quảng Bình">Quảng Bình</option>
+                            <option value="Quảng Nam">Quảng Nam</option>
+                            <option value="Quảng Ngãi">Quảng Ngãi</option>
+                            <option value="Quảng Ninh">Quảng Ninh</option>
+                            <option value="Quảng Trị">Quảng Trị</option>
+                            <option value="Sóc Trăng">Sóc Trăng</option>
+                            <option value="Sơn La">Sơn La</option>
+                            <option value="Tây Ninh">Tây Ninh</option>
+                            <option value="Thái Bình">Thái Bình</option>
+                            <option value="Thái Nguyên">Thái Nguyên</option>
+                            <option value="Thanh Hóa">Thanh Hóa</option>
+                            <option value="Thừa Thiên Huế">Thừa Thiên Huế</option>
+                            <option value="Tiền Giang">Tiền Giang</option>
+                            <option value="Trà Vinh">Trà Vinh</option>
+                            <option value="Tuyên Quang">Tuyên Quang</option>
+                            <option value="Vĩnh Long">Vĩnh Long</option>
+                            <option value="Vĩnh Phúc">Vĩnh Phúc</option>
+                            <option value="Yên Bái">Yên Bái</option>
+                        </select>
+
+                        <input class="form-control hidden" type="text" id="Product" name="Product" required placeholder="Model" value="Tivi" />
+                        @*<input class="form-control" type="text" id="Serial" name="Serial" required placeholder="Serial" />*@
+                        <select class="form-control" id="Model" name="Model" required>
+                            <option value="">--Chọn Model--</option>
+                            <option value=" C825"> C825</option>
+                            <option value="C725">C725</option>
+                            <option value=" Q726"> Q726</option>
+                            <option value="P725">P725</option>
+                            <option value=" P615/P618"> P615/P618</option>
+                        </select>
+                        <select class="form-control" id="Extra" name="Extra" required>
+                            <option value="">--Chọn kích thước--</option>
+                            <option value="50">TV 50"</option>
+                            <option value="55">TV 55"</option>
+                            <option value="65">TV 65"</option>
+                            <option value="75">TV 75"</option>
+                        </select>
+
+                        <div class="box">
+                            <p class="col-xs-3">Hóa đơn: </p>
+                            <div class="col-xs-9">
+                                <input type="file" id="Invoice" name="Invoice" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="text-center box">
+                                <button type="submit" class="btn btn-info" id="btnsubmit"><i class="fa fa-check" aria-hidden="true"></i> GỬI THÔNG TIN</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+
+        }
+
+
+    </div>
+</div>
+@if (ViewBag.msg != null)
+{
+    <!-- Modal --><div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title text-center text-danger">THÔNG BÁO</h3>
+                </div>
+                <div class="modal-body">
+
+                    <p class="text-justify">
+                        @if (ViewBag.msg == "OK")
+                        {
+                            <span>
+                                CHUC MUNG QUY KHACH NHAN DUOC QUA CT "HOAN TIEN THA GA, DON OLYMPIC TAI NHA" VUI LONG TAI VI ZALOPAY VA XAC THUC TAI KHOAN ZALOPAY DE NHAN THUONG CT TRUOC 15/08/2021.<br />
+                                XEM HUONG DAN XAC THUC TAI KHOAN <a href="http://sbsupport.zalopay.vn/support/solutions/articles/43000489506-c%C3%A1ch-%C4%91%E1%BB%8Bnh-danh-t%C3%A0i-kho%E1%BA%A3n-zalopay">https://cutt.ly/ZbRG4bn</a>. CT LIEN HE TAI KHOAN ZALO: KNGAN TCLVN- 091.461.0839 .
+                            </span>
+                        }
+                        else
+                        {
+                            <b style="color:red;">@ViewBag.msg</b>
+                        }
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+}
+
+
+
+
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('#myModal').modal('show');
+        });
+    </script>
+    <script>
+        $('#formpost').submit(function () {
+            var phone = $("#Phone").val();
+            if (phone.length != 10) {
+                alert('Số điện thoại không đúng. Hãy kiểm tra lại');
+                return false;
+            }
+            //var product = $("#Product").val();
+            //var serial = $("#Serial").val();
+
+            //if (product == "Tivi") {
+            //    if (serial.length != 19) {
+            //        alert("Serial Tivi chưa đúng. Hãy kiểm tra lại");
+            //        return false;
+            //    }
+            //} else if (product == "Máy lạnh") {
+            //    if (serial.length != 20) {
+            //        alert("Serial Máy lạnh chưa đúng. Hãy kiểm tra lại");
+            //        return false;
+            //    }
+            //}
+            //else if (product == "Máy giặt") {
+            //    if (serial.length != 26) {
+            //        alert("Serial Máy giặt chưa đúng. Hãy kiểm tra lại");
+            //        return false;
+            //    }
+            //}
+            //else {
+            //    alert("Chọn sản phẩm");
+            //    return false;
+            //}
+            //var $fileUpload = $("#Extra");
+            //if (parseInt($fileUpload.get(0).files.length) > 0 && parseInt($fileUpload.get(0).files.length) != 2) {
+            //    alert("Upload đúng 2 ảnh chương trình yêu cầu");
+            //    return false;
+            //}
+        });
+    </script>
+    <script>
+        //function onchangeserial() {
+        //    var product = $("#Product").val();
+        //    var serial = $("#Serial").val();
+        //    if (product == "Tivi") {
+        //        if (serial.length != 19) {
+        //            alert("Serial Tivi chưa đúng. Hãy kiểm tra lại");
+        //        }
+        //    } else if (product == "Máy lạnh") {
+        //        if (serial.length != 20) {
+        //            alert("Serial Máy lạnh chưa đúng. Hãy kiểm tra lại");
+        //        }
+        //    }
+        //    else if (product == "Máy giặt") {
+        //        if (serial.length != 26) {
+        //            alert("Serial Máy giặt chưa đúng. Hãy kiểm tra lại");
+        //        }
+        //    }
+        //    else {
+        //        alert("Chọn sản phẩm");
+        //    }
+        //}
+        function ChooseProduct() {
+            //$("#Model").html("");
+            //var product = $("#Product").val();
+            //if (product == "Tivi") {
+            //    $("#Model").append(new Option("C725", "C725"));
+            //    $("#Model").append(new Option("P725", "P725"));
+            //    $("#Model").append(new Option("C815", "C815"));
+            //    $("#Model").append(new Option("C715", "C715"));
+            //    $("#Model").append(new Option("Q716", "Q716"));
+            //    $("#Model").append(new Option("P715", "P715"));
+            //    $("#Model").append(new Option("P615", "P615"));
+            //    $("#Model").append(new Option("P618", "P618"));
+
+            //} else if (product == "Máy lạnh") {
+            //    $("#Model").append(new Option("KE88N", "KE88N"));
+            //    $("#Model").append(new Option("XA77", "XA77"));
+            //    $("#Model").append(new Option("KC41", "KC41"));
+            //    $("#Model").append(new Option("TPG11", "TPG11"));
+            //}
+            //else if (product == "Máy Giặt") {
+            //    $("#Model").append(new Option("B302", "B302"));
+            //    $("#Model").append(new Option("F307", "F307"));
+            //    $("#Model").append(new Option("M14303", "M14303"));
+            //    $("#Model").append(new Option("K14508", "K14508"));
+            //}
+            //if (product == "Tivi") {
+            //    $("#spanId").text("800.000");
+            //} else if (product == "Máy lạnh TPG11 1.0HP") {
+            //    $("#spanId").text("800.000");
+            //}
+            //else if (product == "Máy lạnh TPG11 từ 1.5HP") {
+            //    $("#spanId").text("1.000.000");
+            //}
+        }
+    </script>
+}

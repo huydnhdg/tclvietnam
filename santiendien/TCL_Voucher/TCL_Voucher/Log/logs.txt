@@ -1,0 +1,9 @@
+2021-05-15 20:13:38.7818 TCL_Voucher.Controllers.HomeController /Uploads/736_hinh-cho-be-to-mau-45-1024x731.jpg
+2021-05-15 20:13:38.8258 TCL_Voucher.Controllers.HomeController /Uploads/736_hinh-cho-be-to-mau-45-1024x731.jpg;/Uploads/843_download.jpg
+2021-05-15 20:13:38.8258 TCL_Voucher.Controllers.HomeController /Uploads/736_hinh-cho-be-to-mau-45-1024x731.jpg;/Uploads/843_download.jpg;/Uploads/843_download.png
+2021-05-15 20:13:43.4939 TCL_Voucher.Controllers.HomeController {"ID":0,"Name":"test","Phone":"0978334222","BuyAdr":"test","Province":"Ð?ng Nai","Product":"Tivi","EMEI":"test","Model":"test","FileUpload":"/Uploads/736_hinh-cho-be-to-mau-45-1024x731.jpg;/Uploads/843_download.jpg;/Uploads/843_download.png","Createdate":null}
+2021-05-15 20:16:30.4003 TCL_Voucher.Controllers.HomeController /Uploads/534_hinh-cho-be-to-mau-45-1024x731.jpg
+2021-05-15 20:16:30.4343 TCL_Voucher.Controllers.HomeController /Uploads/534_hinh-cho-be-to-mau-45-1024x731.jpg;/Uploads/729_download.jpg
+2021-05-15 20:16:30.7204 TCL_Voucher.Controllers.HomeController /Uploads/534_hinh-cho-be-to-mau-45-1024x731.jpg;/Uploads/729_download.jpg;/Uploads/729_download.png
+2021-05-15 20:16:49.2385 TCL_Voucher.Controllers.HomeController {"ID":0,"Name":"test","Phone":"0978334222","BuyAdr":"test","Province":"Ð?k Nông","Product":"Máy l?nh","EMEI":"test","Model":"test","FileUpload":"/Uploads/534_hinh-cho-be-to-mau-45-1024x731.jpg;/Uploads/729_download.jpg;/Uploads/729_download.png","Createdate":null}
+2021-05-15 20:17:11.9797 TCL_Voucher.Controllers.HomeController S? di?n tho?i dã dang ký quá s? l?n quy d?nh, vui lòng ki?m tra l?i.

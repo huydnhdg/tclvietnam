@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUỐC KHÁNH TẠI GIA, QUAY LÀ TRÚNG QUÀ</title>
+
+    <meta name="twitter:title" content="QUỐC KHÁNH TẠI GIA, QUAY LÀ TRÚNG QUÀ">
+    <meta name="twitter:description" content="Khách hàng mua sản phẩm TV TCL theo danh sách áp dụng, được hoàn tiền điện trực tiếp qua ZaloPay">
+    <meta name="twitter:image" content="http://sansetiendien.tcl.com/Image/banner.jpg">
+
+    <meta property="og:title" content="HOÀN TIỀN THẢ GA, ĐÓN OLYMPIC TẠI NHÀ">
+    <meta property="og:description" content="Khách hàng mua sản phẩm TV TCL theo danh sách áp dụng, được hoàn tiền điện trực tiếp qua ZaloPay">
+    <meta property="og:image" content="http://sansetiendien.tcl.com/Image/banner.jpg">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <style>
+        body {
+            padding: 0;
+        }
+
+        .body-content {
+            padding: 0;
+        }
+
+        .main {
+            margin-bottom: 150px;
+        }
+    </style>
+    <link href="~/Content/Winwheel/main.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="body-content">
+        <div class="main">
+            @RenderBody()
+        </div>
+        <hr />
+        <footer class="text-center">
+            <p>&copy; @DateTime.Now.Year - Bluesea Media</p>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.rawgit.com/InventPartners/bootstrap-responsive-tabs/master/jquery.responsivetabs.js"></script>
+    <script>
+        $(function () {
+            $('.nav-tabs').responsiveTabs();
+        });
+    </script>
+
+    <script src="~/Content/Winwheel/Winwheel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

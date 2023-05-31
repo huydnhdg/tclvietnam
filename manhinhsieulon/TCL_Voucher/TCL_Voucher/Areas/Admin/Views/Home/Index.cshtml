@@ -1,0 +1,146 @@
+﻿@model List<TCL_Voucher.Areas.Admin.Data.ContactModel>
+@{
+    ViewBag.Title = "Home Page";
+    int index = 0;
+}
+<style>
+    thead {
+        background-color: aquamarine;
+    }
+
+    th {
+        text-align: center;
+    }
+
+    td:first-child {
+        text-align: center;
+    }
+
+    .form-control {
+        width: 150px;
+    }
+</style>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="text-center">DANH SÁCH THÔNG TIN KHÁCH HÀNG</h3>
+
+                <a id="btnExport" class="btn btn-success"><i class="fa fa-download" aria-hidden="true"></i> Export File</a>
+                <div class="col-md-9">
+                    @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+                    {
+                        <label class="control-label col-md-2">từ ngày</label>
+                        @Html.TextBox("str_date", ViewBag.str_date as string, new { @class = "form-control col-md-2", @type = "date" })
+                        <label class="control-label col-md-2">đến ngày</label>
+                        @Html.TextBox("end_date", ViewBag.end_date as string, new { @class = "form-control col-md-2", @type = "date" })
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-info"><i class="fa fa-search-plus" aria-hidden="true"></i> Tìm kiếm</button>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Họ tên</th>
+                                <th>Số điện thoại</th>
+                                <th>Mã dự thưởng</th>
+                                <th>Giải</th>
+                                <th>Nơi mua</th>
+                                <th>Thành phố</th>
+                                <th>Sản phẩm</th>
+                                <th>Serial</th>
+                                <th>Model</th>
+                                <th>Ảnh</th>
+                                <th>Ngày tạo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                index++;
+                                <tr>
+                                    <td>
+                                        @index
+                                    </td>
+                                    <td>@item.Name</td>
+                                    <td>@item.Phone</td>
+                                    <td>@item.Maduthuong</td>
+                                    <td>
+                                        @if (item.Giaithuong == 1)
+                                        {
+                                            <span class="alert-danger">Giải nhất</span>
+                                        }
+                                        else if (item.Giaithuong == 2)
+                                        {
+                                            <span class="alert-warning">Giải nhì</span>
+                                        }
+                                        else if (item.Giaithuong == 3)
+                                        {
+                                            <span class="alert-info">Giải ba</span>
+                                        }
+                                    </td>
+                                    <td>@item.BuyAdr</td>
+                                    <td>@item.Province</td>
+                                    <td>@item.Product</td>
+                                    <td>@item.Serial</td>
+                                    <td>@item.Model</td>
+                                    <td>
+                                        <a href="@item.EMEI" target="_blank">
+                                            <img src="@item.EMEI" width="50" />
+                                        </a>
+                                        <a href="@item.INVOICE" target="_blank">
+                                            <img src="@item.INVOICE" width="50" />
+                                        </a>
+                                        <a href="@item.CMNDB" target="_blank">
+                                            <img src="@item.CMNDB" width="50" />
+                                        </a>
+                                        <a href="@item.CMNDA" target="_blank">
+                                            <img src="@item.CMNDA" width="50" />
+                                        </a>
+                                        <a href="@item.Extra" target="_blank">
+                                            <img src="@item.Extra" width="50" />
+                                        </a>
+                                        <a href="@item.Extra1" target="_blank">
+                                            <img src="@item.Extra1" width="50" />
+                                        </a>
+                                        <a href="@item.Extra2" target="_blank">
+                                            <img src="@item.Extra2" width="50" />
+                                        </a>
+                                    </td>
+                                    <td>@item.Createdate</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+@section scripts{
+    <script src="https://cdn.jsdelivr.net/gh/linways/table-to-excel@v1.0.4/dist/tableToExcel.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btnExport").click(function () {
+                let table = document.getElementsByTagName("table");
+                TableToExcel.convert(table[0], { // html code may contain multiple tables so here we are refering to 1st table tag
+                    name: `export_excel.xlsx`, // fileName you could use any name
+                    sheet: {
+                        name: 'Sheet 1' // sheetName
+                    }
+                });
+            });
+        });
+    </script>
+}
